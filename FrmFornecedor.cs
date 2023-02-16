@@ -10,19 +10,24 @@ using System.Windows.Forms;
 
 namespace ProjetoCafeteria
 {
-    public partial class FrmPrincipal : Form
+    public partial class FrmFornecedor : Form
     {
-        public FrmPrincipal()
+        public FrmFornecedor()
         {
             InitializeComponent();
         }
 
-        private void criarPedidosToolStripMenuItem_Click(object sender, EventArgs e)
+        private void label1_Click(object sender, EventArgs e)
         {
 
         }
 
-        private void fornecedoresToolStripMenuItem_Click(object sender, EventArgs e)
+        private void label11_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label13_Click(object sender, EventArgs e)
         {
 
         }
