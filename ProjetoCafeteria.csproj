@@ -46,6 +46,24 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Cargos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Cargos.Designer.cs">
+      <DependentUpon>Cargos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Categoria.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Categoria.Designer.cs">
+      <DependentUpon>Categoria.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Clientes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Clientes.Designer.cs">
+      <DependentUpon>Clientes.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmFornecedor.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -78,8 +96,20 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Cargos.resx">
+      <DependentUpon>Cargos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Categoria.resx">
+      <DependentUpon>Categoria.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Clientes.resx">
+      <DependentUpon>Clientes.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrmFornecedor.resx">
       <DependentUpon>FrmFornecedor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmFuncionarios.resx">
+      <DependentUpon>FrmFuncionarios.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmJanelaSplash.resx">
       <DependentUpon>frmJanelaSplash.cs</DependentUpon>
