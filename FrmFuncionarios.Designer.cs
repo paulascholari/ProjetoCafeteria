@@ -154,11 +154,12 @@
             // label16
             // 
             this.label16.AutoSize = true;
-            this.label16.Location = new System.Drawing.Point(231, 204);
+            this.label16.Location = new System.Drawing.Point(217, 204);
             this.label16.Name = "label16";
             this.label16.Size = new System.Drawing.Size(59, 13);
             this.label16.TabIndex = 60;
             this.label16.Text = "CONTATO";
+            this.label16.Click += new System.EventHandler(this.label16_Click);
             // 
             // label15
             // 
@@ -375,7 +376,6 @@
             this.Controls.Add(this.textBox7);
             this.Controls.Add(this.textBox6);
             this.Name = "FrmFuncionarios";
-            this.Text = "FrmFuncionarios";
             this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();

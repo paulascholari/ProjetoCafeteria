@@ -10,16 +10,11 @@ using System.Windows.Forms;
 
 namespace ProjetoCafeteria
 {
-    public partial class FrmFuncionarios : Form
+    public partial class CategoriaRealatorios : Form
     {
-        public FrmFuncionarios()
+        public CategoriaRealatorios()
         {
             InitializeComponent();
-        }
-
-        private void label16_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }

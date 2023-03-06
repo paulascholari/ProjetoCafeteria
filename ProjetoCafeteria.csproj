@@ -58,6 +58,12 @@
     <Compile Include="Categoria.Designer.cs">
       <DependentUpon>Categoria.cs</DependentUpon>
     </Compile>
+    <Compile Include="CategoriaRealatorios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CategoriaRealatorios.Designer.cs">
+      <DependentUpon>CategoriaRealatorios.cs</DependentUpon>
+    </Compile>
     <Compile Include="ClienteRelatorio.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -70,11 +76,17 @@
     <Compile Include="Clientes.Designer.cs">
       <DependentUpon>Clientes.cs</DependentUpon>
     </Compile>
-    <Compile Include="FrmFornecedor.cs">
+    <Compile Include="CargosRelatorios.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FrmFornecedor.Designer.cs">
-      <DependentUpon>FrmFornecedor.cs</DependentUpon>
+    <Compile Include="CargosRelatorios.Designer.cs">
+      <DependentUpon>CargosRelatorios.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmProdutos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmProdutos.Designer.cs">
+      <DependentUpon>frmProdutos.cs</DependentUpon>
     </Compile>
     <Compile Include="FrmFuncionarios.cs">
       <SubType>Form</SubType>
@@ -100,19 +112,37 @@
     <Compile Include="FrmPrincipal.Designer.cs">
       <DependentUpon>FrmPrincipal.cs</DependentUpon>
     </Compile>
+    <Compile Include="FuncionariosRelatorios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FuncionariosRelatorios.Designer.cs">
+      <DependentUpon>FuncionariosRelatorios.cs</DependentUpon>
+    </Compile>
     <Compile Include="Pedidos.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Pedidos.Designer.cs">
       <DependentUpon>Pedidos.cs</DependentUpon>
     </Compile>
+    <Compile Include="ProdutosRelatorios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ProdutosRelatorios.Designer.cs">
+      <DependentUpon>ProdutosRelatorios.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Cargos.resx">
       <DependentUpon>Cargos.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="CargosRelatorios.resx">
+      <DependentUpon>CargosRelatorios.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Categoria.resx">
       <DependentUpon>Categoria.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CategoriaRealatorios.resx">
+      <DependentUpon>CategoriaRealatorios.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ClienteRelatorio.resx">
       <DependentUpon>ClienteRelatorio.cs</DependentUpon>
@@ -120,8 +150,8 @@
     <EmbeddedResource Include="Clientes.resx">
       <DependentUpon>Clientes.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FrmFornecedor.resx">
-      <DependentUpon>FrmFornecedor.cs</DependentUpon>
+    <EmbeddedResource Include="frmProdutos.resx">
+      <DependentUpon>frmProdutos.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmFuncionarios.resx">
       <DependentUpon>FrmFuncionarios.cs</DependentUpon>
@@ -135,8 +165,14 @@
     <EmbeddedResource Include="FrmPrincipal.resx">
       <DependentUpon>FrmPrincipal.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FuncionariosRelatorios.resx">
+      <DependentUpon>FuncionariosRelatorios.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Pedidos.resx">
       <DependentUpon>Pedidos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProdutosRelatorios.resx">
+      <DependentUpon>ProdutosRelatorios.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -166,6 +202,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\icone.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Trabalho anderson1.PNG" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

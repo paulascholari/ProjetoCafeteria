@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace ProjetoCafeteria
 {
-    public partial class FrmFornecedor : Form
+    public partial class FrmCriarPedidos : Form
     {
-        public FrmFornecedor()
+        public FrmCriarPedidos()
         {
             InitializeComponent();
         }
@@ -22,12 +22,12 @@ namespace ProjetoCafeteria
 
         }
 
-        private void label11_Click(object sender, EventArgs e)
+        private void label3_Click(object sender, EventArgs e)
         {
 
         }
 
-        private void label13_Click(object sender, EventArgs e)
+        private void FrmCriarPedidos_Load(object sender, EventArgs e)
         {
 
         }

@@ -48,7 +48,7 @@
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(12, 34);
+            this.textBox1.Location = new System.Drawing.Point(17, 25);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(50, 20);
             this.textBox1.TabIndex = 11;
@@ -56,20 +56,20 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(9, 18);
+            this.label1.Location = new System.Drawing.Point(13, 9);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(39, 13);
+            this.label1.Size = new System.Drawing.Size(49, 13);
             this.label1.TabIndex = 12;
-            this.label1.Text = "codigo";
+            this.label1.Text = "CODIGO";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(12, 61);
+            this.label2.Location = new System.Drawing.Point(15, 48);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(39, 13);
+            this.label2.Size = new System.Drawing.Size(52, 13);
             this.label2.TabIndex = 14;
-            this.label2.Text = "Cliente";
+            this.label2.Text = "CLIENTE";
             // 
             // panel1
             // 
@@ -81,7 +81,7 @@
             this.panel1.Controls.Add(this.button1);
             this.panel1.Controls.Add(this.button2);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel1.Location = new System.Drawing.Point(0, 276);
+            this.panel1.Location = new System.Drawing.Point(0, 253);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(800, 53);
             this.panel1.TabIndex = 26;
@@ -147,14 +147,14 @@
             "Café",
             "Pão",
             "Suco"});
-            this.listBox1.Location = new System.Drawing.Point(12, 116);
+            this.listBox1.Location = new System.Drawing.Point(18, 104);
             this.listBox1.Name = "listBox1";
             this.listBox1.Size = new System.Drawing.Size(205, 95);
             this.listBox1.TabIndex = 27;
             // 
             // button7
             // 
-            this.button7.Location = new System.Drawing.Point(15, 217);
+            this.button7.Location = new System.Drawing.Point(27, 205);
             this.button7.Name = "button7";
             this.button7.Size = new System.Drawing.Size(75, 23);
             this.button7.TabIndex = 28;
@@ -163,7 +163,7 @@
             // 
             // button8
             // 
-            this.button8.Location = new System.Drawing.Point(113, 217);
+            this.button8.Location = new System.Drawing.Point(123, 205);
             this.button8.Name = "button8";
             this.button8.Size = new System.Drawing.Size(75, 23);
             this.button8.TabIndex = 29;
@@ -173,16 +173,16 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(13, 100);
+            this.label3.Location = new System.Drawing.Point(15, 88);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(49, 13);
+            this.label3.Size = new System.Drawing.Size(68, 13);
             this.label3.TabIndex = 30;
-            this.label3.Text = "Produtos";
+            this.label3.Text = "PRODUTOS";
             // 
             // comboBox1
             // 
             this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(12, 77);
+            this.comboBox1.Location = new System.Drawing.Point(18, 64);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(205, 21);
             this.comboBox1.TabIndex = 31;
@@ -191,7 +191,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 329);
+            this.ClientSize = new System.Drawing.Size(800, 306);
             this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.button8);
