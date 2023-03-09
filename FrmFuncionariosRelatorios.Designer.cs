@@ -1,6 +1,6 @@
 ﻿namespace ProjetoCafeteria
 {
-    partial class ProdutosRelatorios
+    partial class FrmFuncionariosRelatorios
     {
         /// <summary>
         /// Required designer variable.
@@ -51,33 +51,33 @@
             this.listView1.Location = new System.Drawing.Point(0, 0);
             this.listView1.Name = "listView1";
             this.listView1.Size = new System.Drawing.Size(800, 450);
-            this.listView1.TabIndex = 1;
+            this.listView1.TabIndex = 2;
             this.listView1.UseCompatibleStateImageBehavior = false;
             this.listView1.View = System.Windows.Forms.View.Details;
             // 
             // columnHeader1
             // 
-            this.columnHeader1.Text = "Nome";
+            this.columnHeader1.Text = "Nome Do Funcionario";
             this.columnHeader1.Width = 160;
             // 
             // columnHeader2
             // 
-            this.columnHeader2.Text = "Quantidade de Pedidos";
+            this.columnHeader2.Text = "Telefone";
             this.columnHeader2.Width = 132;
             // 
             // columnHeader3
             // 
-            this.columnHeader3.Text = "Endereço";
+            this.columnHeader3.Text = "E-mail";
             this.columnHeader3.Width = 364;
             // 
-            // ProdutosRelatorios
+            // FuncionariosRelatorios
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.listView1);
-            this.Name = "ProdutosRelatorios";
-            this.Text = "ProdutosRelatorios";
+            this.Name = "FuncionariosRelatorios";
+            this.Text = "FuncionariosRelatorios";
             this.ResumeLayout(false);
 
         }

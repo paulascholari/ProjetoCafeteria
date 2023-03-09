@@ -58,11 +58,11 @@
     <Compile Include="Categoria.Designer.cs">
       <DependentUpon>Categoria.cs</DependentUpon>
     </Compile>
-    <Compile Include="CategoriaRealatorios.cs">
+    <Compile Include="FrmCategoriaRealatorios.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="CategoriaRealatorios.Designer.cs">
-      <DependentUpon>CategoriaRealatorios.cs</DependentUpon>
+    <Compile Include="FrmCategoriaRealatorios.Designer.cs">
+      <DependentUpon>FrmCategoriaRealatorios.cs</DependentUpon>
     </Compile>
     <Compile Include="ClienteRelatorio.cs">
       <SubType>Form</SubType>
@@ -76,11 +76,17 @@
     <Compile Include="Clientes.Designer.cs">
       <DependentUpon>Clientes.cs</DependentUpon>
     </Compile>
-    <Compile Include="CargosRelatorios.cs">
+    <Compile Include="FrmCargosRelatorios.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="CargosRelatorios.Designer.cs">
-      <DependentUpon>CargosRelatorios.cs</DependentUpon>
+    <Compile Include="FrmCargosRelatorios.Designer.cs">
+      <DependentUpon>FrmCargosRelatorios.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmPedidosFeitosRelatorios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmPedidosFeitosRelatorios.Designer.cs">
+      <DependentUpon>FrmPedidosFeitosRelatorios.cs</DependentUpon>
     </Compile>
     <Compile Include="frmProdutos.cs">
       <SubType>Form</SubType>
@@ -112,43 +118,46 @@
     <Compile Include="FrmPrincipal.Designer.cs">
       <DependentUpon>FrmPrincipal.cs</DependentUpon>
     </Compile>
-    <Compile Include="FuncionariosRelatorios.cs">
+    <Compile Include="FrmFuncionariosRelatorios.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FuncionariosRelatorios.Designer.cs">
-      <DependentUpon>FuncionariosRelatorios.cs</DependentUpon>
+    <Compile Include="FrmFuncionariosRelatorios.Designer.cs">
+      <DependentUpon>FrmFuncionariosRelatorios.cs</DependentUpon>
     </Compile>
-    <Compile Include="Pedidos.cs">
+    <Compile Include="FrmPedidos.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Pedidos.Designer.cs">
-      <DependentUpon>Pedidos.cs</DependentUpon>
+    <Compile Include="FrmPedidos.Designer.cs">
+      <DependentUpon>FrmPedidos.cs</DependentUpon>
     </Compile>
-    <Compile Include="ProdutosRelatorios.cs">
+    <Compile Include="FrmProdutosRelatorios.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ProdutosRelatorios.Designer.cs">
-      <DependentUpon>ProdutosRelatorios.cs</DependentUpon>
+    <Compile Include="FrmProdutosRelatorios.Designer.cs">
+      <DependentUpon>FrmProdutosRelatorios.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Cargos.resx">
       <DependentUpon>Cargos.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="CargosRelatorios.resx">
-      <DependentUpon>CargosRelatorios.cs</DependentUpon>
+    <EmbeddedResource Include="FrmCargosRelatorios.resx">
+      <DependentUpon>FrmCargosRelatorios.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Categoria.resx">
       <DependentUpon>Categoria.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="CategoriaRealatorios.resx">
-      <DependentUpon>CategoriaRealatorios.cs</DependentUpon>
+    <EmbeddedResource Include="FrmCategoriaRealatorios.resx">
+      <DependentUpon>FrmCategoriaRealatorios.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ClienteRelatorio.resx">
       <DependentUpon>ClienteRelatorio.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Clientes.resx">
       <DependentUpon>Clientes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmPedidosFeitosRelatorios.resx">
+      <DependentUpon>FrmPedidosFeitosRelatorios.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmProdutos.resx">
       <DependentUpon>frmProdutos.cs</DependentUpon>
@@ -165,14 +174,14 @@
     <EmbeddedResource Include="FrmPrincipal.resx">
       <DependentUpon>FrmPrincipal.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FuncionariosRelatorios.resx">
-      <DependentUpon>FuncionariosRelatorios.cs</DependentUpon>
+    <EmbeddedResource Include="FrmFuncionariosRelatorios.resx">
+      <DependentUpon>FrmFuncionariosRelatorios.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Pedidos.resx">
-      <DependentUpon>Pedidos.cs</DependentUpon>
+    <EmbeddedResource Include="FrmPedidos.resx">
+      <DependentUpon>FrmPedidos.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ProdutosRelatorios.resx">
-      <DependentUpon>ProdutosRelatorios.cs</DependentUpon>
+    <EmbeddedResource Include="FrmProdutosRelatorios.resx">
+      <DependentUpon>FrmProdutosRelatorios.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

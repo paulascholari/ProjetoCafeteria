@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace ProjetoCafeteria
 {
-    public partial class ProdutosRelatorios : Form
+    public partial class FrmPedidos : Form
     {
-        public ProdutosRelatorios()
+        public FrmPedidos()
         {
             InitializeComponent();
         }
