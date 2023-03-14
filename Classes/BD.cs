@@ -15,7 +15,7 @@ namespace ProjetoCafeteria.Classes
         static SqlConnection con;
         public static void AbreBanco()
         {
-            stringConexao = @"Data Source=DELL\SQLEXPRESS; Initial Catalog=db_Biblioteca;Integrated Security=true";
+            stringConexao = @"Data Source=BOT0626782W10-2; Initial Catalog=LePetit;User Id=sa;Password=sasenac";
 
             con = new SqlConnection();
             con.ConnectionString = stringConexao;

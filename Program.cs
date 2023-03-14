@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ProjetoCafeteria.Classes;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -16,6 +17,8 @@ namespace ProjetoCafeteria
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
+            // esse comando serve para abri o banco de dados 
+            BD.AbreBanco();
             Application.Run(new FrmPrincipal());
         }
     }

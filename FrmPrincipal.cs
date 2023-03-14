@@ -39,6 +39,7 @@ namespace ProjetoCafeteria
         {
 
             AbrirTela(new frmJanelaSplash());
+            AbrirTela(new frmLogin());
         }
 
         private void categoriasToolStripMenuItem_Click(object sender, EventArgs e)
