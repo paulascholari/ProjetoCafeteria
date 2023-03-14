@@ -29,7 +29,7 @@ namespace ProjetoCafeteria
 
         private void FrmPrincipal_Load(object sender, EventArgs e)
         {
-
+            Close();
         }
     }
 }
