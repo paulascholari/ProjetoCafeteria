@@ -1,6 +1,6 @@
 ﻿namespace ProjetoCafeteria
 {
-    partial class ClienteRelatorio
+    partial class FrmClienteRelatorio
     {
         /// <summary>
         /// Required designer variable.

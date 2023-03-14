@@ -63,7 +63,7 @@
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.listView1);
             this.Name = "FrmCargosRelatorios";
-            this.Text = "Form1";
+            this.Text = "Cargos";
             this.ResumeLayout(false);
 
         }

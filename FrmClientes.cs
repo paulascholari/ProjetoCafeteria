@@ -10,11 +10,21 @@ using System.Windows.Forms;
 
 namespace ProjetoCafeteria
 {
-    public partial class Cargos : Form
+    public partial class FrmClientes : Form
     {
-        public Cargos()
+        public FrmClientes()
         {
             InitializeComponent();
+        }
+
+        private void textBox3_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -10,16 +10,11 @@ using System.Windows.Forms;
 
 namespace ProjetoCafeteria
 {
-    public partial class Categoria : Form
+    public partial class FrmClienteRelatorio : Form
     {
-        public Categoria()
+        public FrmClienteRelatorio()
         {
             InitializeComponent();
-        }
-
-        private void button5_Click(object sender, EventArgs e)
-        {
-            Close();
         }
     }
 }

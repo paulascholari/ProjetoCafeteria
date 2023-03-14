@@ -16,7 +16,7 @@ namespace ProjetoCafeteria
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frmJanelaSplash());
+            Application.Run(new FrmPrincipal());
         }
     }
 }
