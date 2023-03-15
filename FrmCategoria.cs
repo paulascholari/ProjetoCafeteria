@@ -40,8 +40,10 @@ namespace ProjetoCafeteria
                 //comando sql para inserir o item 
                 var sql = $@"INSERT INTO Categorias (NomeDaCategoria)
                     VALUES ('{Categoria}')";
+                 // verificando se o codigo não esta vazio
                 if (codigo != "")
                 {
+                    // comando sql para atualizar o item 
                     sql = $@"UPDATE Categorias
                         SET NomeDaCategoria='{Categoria}'
                         WHERE IdCategoria ={codigo}";
