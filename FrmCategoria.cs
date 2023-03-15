@@ -64,6 +64,7 @@ namespace ProjetoCafeteria
             // abrindo a tela de localização de categorias
             var form = new FrmCategoriaLocalizar();
             form.ShowDialog();
+            // tratando os erros 
             try
             {
                 // pegando o item selecionado 
