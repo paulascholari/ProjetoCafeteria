@@ -69,9 +69,13 @@ namespace ProjetoCafeteria
 
         private void BtnExcluir_Click(object sender, EventArgs e)
         {
+            // pegando o codigo da categoria selecionando e apagando os campos em branco
             var codigo = TextCodigo.Text.Trim();
+            // comando sql de exclusão 
             var sql = $@"delete from Categorias where IdCategoria = {codigo}";
+            //rodando o comando
             BD.RetornaDatatable(sql);
+            //fechando assim que deletar 
             Close();
         }
     }
