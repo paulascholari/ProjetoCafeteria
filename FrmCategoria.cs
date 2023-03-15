@@ -30,6 +30,8 @@ namespace ProjetoCafeteria
 
         private void BtnSalvar_Click(object sender, EventArgs e)
         {
+            // pegando o codigo da categoria selecionando e apagando os campos em branco
+            var codigo = TextCodigo.Text.Trim();
             //Replace evita o sql injection trim remove os espaços 
             var Categoria = TextCategoria.Text.Replace("'", "").Trim();
              // verifica se o texto da categoria não esta vazio
@@ -38,6 +40,12 @@ namespace ProjetoCafeteria
                 //comando sql para inserir o item 
                 var sql = $@"INSERT INTO Categorias (NomeDaCategoria)
                     VALUES ('{Categoria}')";
+                if (codigo != "")
+                {
+                    sql = $@"UPDATE Categorias
+                        SET NomeDaCategoria='{Categoria}'
+                        WHERE IdCategoria ={codigo}";
+                }
                   //executa o comando 
                 BD.RetornaDatatable(sql);
                 Close();
