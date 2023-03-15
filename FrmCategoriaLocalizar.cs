@@ -13,22 +13,35 @@ namespace ProjetoCafeteria
 {
     public partial class FrmCategoriaLocalizar : Form
     {
+        private DataRowCollection Categorias;
         public FrmCategoriaLocalizar()
         {
             InitializeComponent();
         }
+        // pegar o item selecionado
+        public DataRow PegarItemSelecionado()
+        {
+            return Categorias[ListaCategorias.SelectedIndex];
+        }
 
         private void FrmCategoriaLocalizar_Load(object sender, EventArgs e)
         {
+            // esta criando o comando sql  
             var sql = $@"Select IdCategoria ,NomeDaCategoria  From Categorias";
-            var Categorias = BD.RetornaDatatable(sql);
-            if (Categorias.Rows.Count != 0)
+             // Esta executando o comando sql e salvando as linhas dentro da propriedade categorias
+             Categorias = BD.RetornaDatatable(sql).Rows;
+            // percorrendo as categorias 
+            foreach (DataRow row in Categorias)
             {
-                foreach (DataRow row in Categorias.Rows)
-                {
-                    ListaCategorias.Items.Add(row[1].ToString());
-                }
+                // adicionando na lista de seleção 
+                ListaCategorias.Items.Add(row[1].ToString());
             }
+        }
+
+
+        private void ListaCategorias_SelectedIndexChanged_1(object sender, EventArgs e)
+        {
+            Close();
         }
     }
 }

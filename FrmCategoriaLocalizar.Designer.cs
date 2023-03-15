@@ -28,18 +28,18 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.ListaCategorias = new System.Windows.Forms.ListView();
+            this.ListaCategorias = new System.Windows.Forms.ListBox();
             this.SuspendLayout();
             // 
             // ListaCategorias
             // 
             this.ListaCategorias.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.ListaCategorias.HideSelection = false;
+            this.ListaCategorias.FormattingEnabled = true;
             this.ListaCategorias.Location = new System.Drawing.Point(0, 0);
             this.ListaCategorias.Name = "ListaCategorias";
             this.ListaCategorias.Size = new System.Drawing.Size(800, 450);
-            this.ListaCategorias.TabIndex = 0;
-            this.ListaCategorias.UseCompatibleStateImageBehavior = false;
+            this.ListaCategorias.TabIndex = 1;
+            this.ListaCategorias.SelectedIndexChanged += new System.EventHandler(this.ListaCategorias_SelectedIndexChanged_1);
             // 
             // FrmCategoriaLocalizar
             // 
@@ -56,6 +56,6 @@
 
         #endregion
 
-        private System.Windows.Forms.ListView ListaCategorias;
+        private System.Windows.Forms.ListBox ListaCategorias;
     }
 }

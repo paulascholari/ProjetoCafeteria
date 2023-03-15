@@ -30,25 +30,25 @@
         {
             this.components = new System.ComponentModel.Container();
             this.label1 = new System.Windows.Forms.Label();
-            this.textBox6 = new System.Windows.Forms.TextBox();
+            this.TextCodigo = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.button6 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.BtnExcluir = new System.Windows.Forms.Button();
+            this.BtnFechar = new System.Windows.Forms.Button();
+            this.BtnLocalizar = new System.Windows.Forms.Button();
+            this.BtnSalvar = new System.Windows.Forms.Button();
+            this.BtnNovo = new System.Windows.Forms.Button();
+            this.BtnCancelar = new System.Windows.Forms.Button();
             this.label18 = new System.Windows.Forms.Label();
-            this.textBox18 = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.TextObservacao = new System.Windows.Forms.TextBox();
+            this.TextPreco = new System.Windows.Forms.TextBox();
+            this.TextCategoria = new System.Windows.Forms.TextBox();
+            this.TextProdutos = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.TextUnidade = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -62,12 +62,12 @@
             this.label1.Text = "CODIGO";
             this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
-            // textBox6
+            // TextCodigo
             // 
-            this.textBox6.Location = new System.Drawing.Point(12, 25);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(56, 20);
-            this.textBox6.TabIndex = 9;
+            this.TextCodigo.Location = new System.Drawing.Point(12, 25);
+            this.TextCodigo.Name = "TextCodigo";
+            this.TextCodigo.Size = new System.Drawing.Size(56, 20);
+            this.TextCodigo.TabIndex = 9;
             // 
             // label3
             // 
@@ -82,72 +82,74 @@
             // panel1
             // 
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.panel1.Controls.Add(this.button6);
-            this.panel1.Controls.Add(this.button5);
-            this.panel1.Controls.Add(this.button4);
-            this.panel1.Controls.Add(this.button3);
-            this.panel1.Controls.Add(this.button1);
-            this.panel1.Controls.Add(this.button2);
+            this.panel1.Controls.Add(this.BtnExcluir);
+            this.panel1.Controls.Add(this.BtnFechar);
+            this.panel1.Controls.Add(this.BtnLocalizar);
+            this.panel1.Controls.Add(this.BtnSalvar);
+            this.panel1.Controls.Add(this.BtnNovo);
+            this.panel1.Controls.Add(this.BtnCancelar);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panel1.Location = new System.Drawing.Point(0, 204);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(800, 53);
             this.panel1.TabIndex = 35;
             // 
-            // button6
+            // BtnExcluir
             // 
-            this.button6.Location = new System.Drawing.Point(253, 16);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(75, 23);
-            this.button6.TabIndex = 30;
-            this.button6.Text = "Excluir";
-            this.button6.UseVisualStyleBackColor = true;
+            this.BtnExcluir.Enabled = false;
+            this.BtnExcluir.Location = new System.Drawing.Point(253, 16);
+            this.BtnExcluir.Name = "BtnExcluir";
+            this.BtnExcluir.Size = new System.Drawing.Size(75, 23);
+            this.BtnExcluir.TabIndex = 30;
+            this.BtnExcluir.Text = "Excluir";
+            this.BtnExcluir.UseVisualStyleBackColor = true;
             // 
-            // button5
+            // BtnFechar
             // 
-            this.button5.Location = new System.Drawing.Point(432, 16);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(75, 23);
-            this.button5.TabIndex = 29;
-            this.button5.Text = "Fechar";
-            this.button5.UseVisualStyleBackColor = true;
-            this.button5.Click += new System.EventHandler(this.button5_Click);
+            this.BtnFechar.Location = new System.Drawing.Point(432, 16);
+            this.BtnFechar.Name = "BtnFechar";
+            this.BtnFechar.Size = new System.Drawing.Size(75, 23);
+            this.BtnFechar.TabIndex = 29;
+            this.BtnFechar.Text = "Fechar";
+            this.BtnFechar.UseVisualStyleBackColor = true;
+            this.BtnFechar.Click += new System.EventHandler(this.button5_Click);
             // 
-            // button4
+            // BtnLocalizar
             // 
-            this.button4.Location = new System.Drawing.Point(334, 16);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(75, 23);
-            this.button4.TabIndex = 28;
-            this.button4.Text = "Localizar";
-            this.button4.UseVisualStyleBackColor = true;
+            this.BtnLocalizar.Location = new System.Drawing.Point(334, 16);
+            this.BtnLocalizar.Name = "BtnLocalizar";
+            this.BtnLocalizar.Size = new System.Drawing.Size(75, 23);
+            this.BtnLocalizar.TabIndex = 28;
+            this.BtnLocalizar.Text = "Localizar";
+            this.BtnLocalizar.UseVisualStyleBackColor = true;
             // 
-            // button3
+            // BtnSalvar
             // 
-            this.button3.Location = new System.Drawing.Point(91, 16);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(75, 23);
-            this.button3.TabIndex = 27;
-            this.button3.Text = "Salvar";
-            this.button3.UseVisualStyleBackColor = true;
+            this.BtnSalvar.Location = new System.Drawing.Point(91, 16);
+            this.BtnSalvar.Name = "BtnSalvar";
+            this.BtnSalvar.Size = new System.Drawing.Size(75, 23);
+            this.BtnSalvar.TabIndex = 27;
+            this.BtnSalvar.Text = "Salvar";
+            this.BtnSalvar.UseVisualStyleBackColor = true;
             // 
-            // button1
+            // BtnNovo
             // 
-            this.button1.Location = new System.Drawing.Point(10, 16);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 25;
-            this.button1.Text = "Novo";
-            this.button1.UseVisualStyleBackColor = true;
+            this.BtnNovo.Location = new System.Drawing.Point(10, 16);
+            this.BtnNovo.Name = "BtnNovo";
+            this.BtnNovo.Size = new System.Drawing.Size(75, 23);
+            this.BtnNovo.TabIndex = 25;
+            this.BtnNovo.Text = "Novo";
+            this.BtnNovo.UseVisualStyleBackColor = true;
             // 
-            // button2
+            // BtnCancelar
             // 
-            this.button2.Location = new System.Drawing.Point(172, 16);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
-            this.button2.TabIndex = 26;
-            this.button2.Text = "Cancelar";
-            this.button2.UseVisualStyleBackColor = true;
+            this.BtnCancelar.Enabled = false;
+            this.BtnCancelar.Location = new System.Drawing.Point(172, 16);
+            this.BtnCancelar.Name = "BtnCancelar";
+            this.BtnCancelar.Size = new System.Drawing.Size(75, 23);
+            this.BtnCancelar.TabIndex = 26;
+            this.BtnCancelar.Text = "Cancelar";
+            this.BtnCancelar.UseVisualStyleBackColor = true;
             // 
             // label18
             // 
@@ -158,34 +160,34 @@
             this.label18.TabIndex = 64;
             this.label18.Text = "OBSERVAÇÃO";
             // 
-            // textBox18
+            // TextObservacao
             // 
-            this.textBox18.Location = new System.Drawing.Point(12, 142);
-            this.textBox18.Multiline = true;
-            this.textBox18.Name = "textBox18";
-            this.textBox18.Size = new System.Drawing.Size(454, 41);
-            this.textBox18.TabIndex = 63;
+            this.TextObservacao.Location = new System.Drawing.Point(12, 142);
+            this.TextObservacao.Multiline = true;
+            this.TextObservacao.Name = "TextObservacao";
+            this.TextObservacao.Size = new System.Drawing.Size(454, 41);
+            this.TextObservacao.TabIndex = 63;
             // 
-            // textBox1
+            // TextPreco
             // 
-            this.textBox1.Location = new System.Drawing.Point(231, 64);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(79, 20);
-            this.textBox1.TabIndex = 65;
+            this.TextPreco.Location = new System.Drawing.Point(231, 64);
+            this.TextPreco.Name = "TextPreco";
+            this.TextPreco.Size = new System.Drawing.Size(79, 20);
+            this.TextPreco.TabIndex = 65;
             // 
-            // textBox2
+            // TextCategoria
             // 
-            this.textBox2.Location = new System.Drawing.Point(12, 103);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(213, 20);
-            this.textBox2.TabIndex = 66;
+            this.TextCategoria.Location = new System.Drawing.Point(12, 103);
+            this.TextCategoria.Name = "TextCategoria";
+            this.TextCategoria.Size = new System.Drawing.Size(213, 20);
+            this.TextCategoria.TabIndex = 66;
             // 
-            // textBox3
+            // TextProdutos
             // 
-            this.textBox3.Location = new System.Drawing.Point(12, 64);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(213, 20);
-            this.textBox3.TabIndex = 67;
+            this.TextProdutos.Location = new System.Drawing.Point(12, 64);
+            this.TextProdutos.Name = "TextProdutos";
+            this.TextProdutos.Size = new System.Drawing.Size(213, 20);
+            this.TextProdutos.TabIndex = 67;
             // 
             // label2
             // 
@@ -219,32 +221,32 @@
             this.contextMenuStrip1.Name = "contextMenuStrip1";
             this.contextMenuStrip1.Size = new System.Drawing.Size(61, 4);
             // 
-            // textBox4
+            // TextUnidade
             // 
-            this.textBox4.Location = new System.Drawing.Point(316, 64);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(79, 20);
-            this.textBox4.TabIndex = 72;
+            this.TextUnidade.Location = new System.Drawing.Point(316, 64);
+            this.TextUnidade.Name = "TextUnidade";
+            this.TextUnidade.Size = new System.Drawing.Size(79, 20);
+            this.TextUnidade.TabIndex = 72;
             // 
-            // FrmCriarPedidos
+            // frmProdutos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 257);
-            this.Controls.Add(this.textBox4);
+            this.Controls.Add(this.TextUnidade);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.TextProdutos);
+            this.Controls.Add(this.TextCategoria);
+            this.Controls.Add(this.TextPreco);
             this.Controls.Add(this.label18);
-            this.Controls.Add(this.textBox18);
+            this.Controls.Add(this.TextObservacao);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.textBox6);
-            this.Name = "FrmCriarPedidos";
+            this.Controls.Add(this.TextCodigo);
+            this.Name = "frmProdutos";
             this.Text = "Produtos";
             this.Load += new System.EventHandler(this.FrmCriarPedidos_Load);
             this.panel1.ResumeLayout(false);
@@ -256,24 +258,24 @@
         #endregion
 
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox6;
+        private System.Windows.Forms.TextBox TextCodigo;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Button button6;
-        private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button BtnExcluir;
+        private System.Windows.Forms.Button BtnFechar;
+        private System.Windows.Forms.Button BtnLocalizar;
+        private System.Windows.Forms.Button BtnSalvar;
+        private System.Windows.Forms.Button BtnNovo;
+        private System.Windows.Forms.Button BtnCancelar;
         private System.Windows.Forms.Label label18;
-        private System.Windows.Forms.TextBox textBox18;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox TextObservacao;
+        private System.Windows.Forms.TextBox TextPreco;
+        private System.Windows.Forms.TextBox TextCategoria;
+        private System.Windows.Forms.TextBox TextProdutos;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox TextUnidade;
     }
 }
