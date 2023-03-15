@@ -21,7 +21,10 @@ namespace ProjetoCafeteria
         // pegar o item selecionado
         public DataRow PegarItemSelecionado()
         {
-            return Categorias[ListaCategorias.SelectedIndex];
+            try
+            {
+                return Categorias[ListaCategorias.SelectedIndex];
+            }catch { throw new Exception(); }
         }
 
         private void FrmCategoriaLocalizar_Load(object sender, EventArgs e)

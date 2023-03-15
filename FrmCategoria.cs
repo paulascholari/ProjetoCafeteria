@@ -64,15 +64,22 @@ namespace ProjetoCafeteria
             // abrindo a tela de localização de categorias
             var form = new FrmCategoriaLocalizar();
             form.ShowDialog();
-            // pegando o item selecionado 
-            var categoria =form.PegarItemSelecionado();
-            // atribuindo o primeiro item do categoria ao campo de codigo
-            TextCodigo.Text = categoria[0].ToString();
-            // atribuindo o segundo item do categoria ao campo de categoria
-            TextCategoria.Text = categoria[1].ToString();
+            try
+            {
+                // pegando o item selecionado 
+                var categoria = form.PegarItemSelecionado();
+                // atribuindo o primeiro item do categoria ao campo de codigo
+                TextCodigo.Text = categoria[0].ToString();
+                // atribuindo o segundo item do categoria ao campo de categoria
+                TextCategoria.Text = categoria[1].ToString();
 
-            BtnCancelar.Enabled = true;
-            BtnExcluir.Enabled = true;
+                BtnCancelar.Enabled = true;
+                BtnExcluir.Enabled = true;
+            }
+            catch
+            {
+                return;
+            }
         }
 
         private void TextCategoria_TextChanged(object sender, EventArgs e)
