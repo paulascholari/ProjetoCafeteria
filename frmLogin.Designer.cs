@@ -46,14 +46,14 @@
             this.txtSenha.Location = new System.Drawing.Point(253, 153);
             this.txtSenha.Name = "txtSenha";
             this.txtSenha.Size = new System.Drawing.Size(130, 20);
-            this.txtSenha.TabIndex = 1;
+            this.txtSenha.TabIndex = 2;
             // 
             // txtUsuario
             // 
             this.txtUsuario.Location = new System.Drawing.Point(253, 111);
             this.txtUsuario.Name = "txtUsuario";
             this.txtUsuario.Size = new System.Drawing.Size(130, 20);
-            this.txtUsuario.TabIndex = 2;
+            this.txtUsuario.TabIndex = 1;
             this.txtUsuario.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
             // 
             // pictureBox1
@@ -100,7 +100,7 @@
             this.btncancelar.Location = new System.Drawing.Point(224, 7);
             this.btncancelar.Name = "btncancelar";
             this.btncancelar.Size = new System.Drawing.Size(97, 30);
-            this.btncancelar.TabIndex = 1;
+            this.btncancelar.TabIndex = 4;
             this.btncancelar.Text = "&Cancelar";
             this.btncancelar.UseVisualStyleBackColor = true;
             this.btncancelar.Click += new System.EventHandler(this.btncancelar_Click);
@@ -110,7 +110,7 @@
             this.btnentrar.Location = new System.Drawing.Point(121, 7);
             this.btnentrar.Name = "btnentrar";
             this.btnentrar.Size = new System.Drawing.Size(97, 30);
-            this.btnentrar.TabIndex = 0;
+            this.btnentrar.TabIndex = 3;
             this.btnentrar.Text = "&Entrar";
             this.btnentrar.UseVisualStyleBackColor = true;
             this.btnentrar.Click += new System.EventHandler(this.btnentrar_Click);
@@ -139,6 +139,7 @@
             this.Controls.Add(this.pictureBox1);
             this.Name = "frmLogin";
             this.Text = "frmLogin";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Formclose);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);

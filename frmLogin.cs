@@ -61,5 +61,10 @@ namespace ProjetoCafeteria
             }
             Close();
         }
+
+        private void Formclose(object sender, FormClosedEventArgs e)
+        {
+
+        }
     }
 }
