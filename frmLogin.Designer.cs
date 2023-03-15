@@ -140,6 +140,7 @@
             this.Name = "frmLogin";
             this.Text = "frmLogin";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Formclose);
+            this.Load += new System.EventHandler(this.frmLogin_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);

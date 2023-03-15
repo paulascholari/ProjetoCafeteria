@@ -28,33 +28,34 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox6 = new System.Windows.Forms.TextBox();
+            this.TextCargo = new System.Windows.Forms.TextBox();
+            this.TextCodigo = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.button7 = new System.Windows.Forms.Button();
-            this.button8 = new System.Windows.Forms.Button();
-            this.button9 = new System.Windows.Forms.Button();
-            this.button10 = new System.Windows.Forms.Button();
-            this.button11 = new System.Windows.Forms.Button();
-            this.button12 = new System.Windows.Forms.Button();
+            this.BtnExcluir = new System.Windows.Forms.Button();
+            this.BtnFechar = new System.Windows.Forms.Button();
+            this.BtnLocalizar = new System.Windows.Forms.Button();
+            this.BtnSalvar = new System.Windows.Forms.Button();
+            this.BtnNovo = new System.Windows.Forms.Button();
+            this.BtnCancelar = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
-            // textBox1
+            // TextCargo
             // 
-            this.textBox1.Location = new System.Drawing.Point(12, 67);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(263, 20);
-            this.textBox1.TabIndex = 2;
+            this.TextCargo.Location = new System.Drawing.Point(12, 67);
+            this.TextCargo.Name = "TextCargo";
+            this.TextCargo.Size = new System.Drawing.Size(263, 20);
+            this.TextCargo.TabIndex = 2;
+            this.TextCargo.TextChanged += new System.EventHandler(this.TextCargo_TextChanged);
             // 
-            // textBox6
+            // TextCodigo
             // 
-            this.textBox6.Location = new System.Drawing.Point(12, 25);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(56, 20);
-            this.textBox6.TabIndex = 7;
+            this.TextCodigo.Location = new System.Drawing.Point(12, 25);
+            this.TextCodigo.Name = "TextCodigo";
+            this.TextCodigo.Size = new System.Drawing.Size(56, 20);
+            this.TextCodigo.TabIndex = 7;
             // 
             // label1
             // 
@@ -77,71 +78,75 @@
             // panel1
             // 
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.panel1.Controls.Add(this.button7);
-            this.panel1.Controls.Add(this.button8);
-            this.panel1.Controls.Add(this.button9);
-            this.panel1.Controls.Add(this.button10);
-            this.panel1.Controls.Add(this.button11);
-            this.panel1.Controls.Add(this.button12);
+            this.panel1.Controls.Add(this.BtnExcluir);
+            this.panel1.Controls.Add(this.BtnFechar);
+            this.panel1.Controls.Add(this.BtnLocalizar);
+            this.panel1.Controls.Add(this.BtnSalvar);
+            this.panel1.Controls.Add(this.BtnNovo);
+            this.panel1.Controls.Add(this.BtnCancelar);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panel1.Location = new System.Drawing.Point(0, 104);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(800, 53);
             this.panel1.TabIndex = 37;
             // 
-            // button7
+            // BtnExcluir
             // 
-            this.button7.Location = new System.Drawing.Point(253, 16);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(75, 23);
-            this.button7.TabIndex = 30;
-            this.button7.Text = "Excluir";
-            this.button7.UseVisualStyleBackColor = true;
+            this.BtnExcluir.Enabled = false;
+            this.BtnExcluir.Location = new System.Drawing.Point(253, 16);
+            this.BtnExcluir.Name = "BtnExcluir";
+            this.BtnExcluir.Size = new System.Drawing.Size(75, 23);
+            this.BtnExcluir.TabIndex = 30;
+            this.BtnExcluir.Text = "Excluir";
+            this.BtnExcluir.UseVisualStyleBackColor = true;
             // 
-            // button8
+            // BtnFechar
             // 
-            this.button8.Location = new System.Drawing.Point(432, 16);
-            this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(75, 23);
-            this.button8.TabIndex = 29;
-            this.button8.Text = "Fechar";
-            this.button8.UseVisualStyleBackColor = true;
+            this.BtnFechar.Location = new System.Drawing.Point(432, 16);
+            this.BtnFechar.Name = "BtnFechar";
+            this.BtnFechar.Size = new System.Drawing.Size(75, 23);
+            this.BtnFechar.TabIndex = 29;
+            this.BtnFechar.Text = "Fechar";
+            this.BtnFechar.UseVisualStyleBackColor = true;
             // 
-            // button9
+            // BtnLocalizar
             // 
-            this.button9.Location = new System.Drawing.Point(334, 16);
-            this.button9.Name = "button9";
-            this.button9.Size = new System.Drawing.Size(75, 23);
-            this.button9.TabIndex = 28;
-            this.button9.Text = "Localizar";
-            this.button9.UseVisualStyleBackColor = true;
+            this.BtnLocalizar.Location = new System.Drawing.Point(334, 16);
+            this.BtnLocalizar.Name = "BtnLocalizar";
+            this.BtnLocalizar.Size = new System.Drawing.Size(75, 23);
+            this.BtnLocalizar.TabIndex = 28;
+            this.BtnLocalizar.Text = "Localizar";
+            this.BtnLocalizar.UseVisualStyleBackColor = true;
+            this.BtnLocalizar.Click += new System.EventHandler(this.BtnLocalizar_Click);
             // 
-            // button10
+            // BtnSalvar
             // 
-            this.button10.Location = new System.Drawing.Point(91, 16);
-            this.button10.Name = "button10";
-            this.button10.Size = new System.Drawing.Size(75, 23);
-            this.button10.TabIndex = 27;
-            this.button10.Text = "Salvar";
-            this.button10.UseVisualStyleBackColor = true;
+            this.BtnSalvar.Location = new System.Drawing.Point(91, 16);
+            this.BtnSalvar.Name = "BtnSalvar";
+            this.BtnSalvar.Size = new System.Drawing.Size(75, 23);
+            this.BtnSalvar.TabIndex = 27;
+            this.BtnSalvar.Text = "Salvar";
+            this.BtnSalvar.UseVisualStyleBackColor = true;
+            this.BtnSalvar.Click += new System.EventHandler(this.BtnSalvar_Click);
             // 
-            // button11
+            // BtnNovo
             // 
-            this.button11.Location = new System.Drawing.Point(10, 16);
-            this.button11.Name = "button11";
-            this.button11.Size = new System.Drawing.Size(75, 23);
-            this.button11.TabIndex = 25;
-            this.button11.Text = "Novo";
-            this.button11.UseVisualStyleBackColor = true;
+            this.BtnNovo.Location = new System.Drawing.Point(10, 16);
+            this.BtnNovo.Name = "BtnNovo";
+            this.BtnNovo.Size = new System.Drawing.Size(75, 23);
+            this.BtnNovo.TabIndex = 25;
+            this.BtnNovo.Text = "Novo";
+            this.BtnNovo.UseVisualStyleBackColor = true;
             // 
-            // button12
+            // BtnCancelar
             // 
-            this.button12.Location = new System.Drawing.Point(172, 16);
-            this.button12.Name = "button12";
-            this.button12.Size = new System.Drawing.Size(75, 23);
-            this.button12.TabIndex = 26;
-            this.button12.Text = "Cancelar";
-            this.button12.UseVisualStyleBackColor = true;
+            this.BtnCancelar.Enabled = false;
+            this.BtnCancelar.Location = new System.Drawing.Point(172, 16);
+            this.BtnCancelar.Name = "BtnCancelar";
+            this.BtnCancelar.Size = new System.Drawing.Size(75, 23);
+            this.BtnCancelar.TabIndex = 26;
+            this.BtnCancelar.Text = "Cancelar";
+            this.BtnCancelar.UseVisualStyleBackColor = true;
             // 
             // FrmCargos
             // 
@@ -151,8 +156,8 @@
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.textBox6);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.TextCodigo);
+            this.Controls.Add(this.TextCargo);
             this.Name = "FrmCargos";
             this.Text = "CargosRelatorios";
             this.panel1.ResumeLayout(false);
@@ -163,16 +168,16 @@
 
         #endregion
 
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox6;
+        private System.Windows.Forms.TextBox TextCargo;
+        private System.Windows.Forms.TextBox TextCodigo;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Button button7;
-        private System.Windows.Forms.Button button8;
-        private System.Windows.Forms.Button button9;
-        private System.Windows.Forms.Button button10;
-        private System.Windows.Forms.Button button11;
-        private System.Windows.Forms.Button button12;
+        private System.Windows.Forms.Button BtnExcluir;
+        private System.Windows.Forms.Button BtnFechar;
+        private System.Windows.Forms.Button BtnLocalizar;
+        private System.Windows.Forms.Button BtnSalvar;
+        private System.Windows.Forms.Button BtnNovo;
+        private System.Windows.Forms.Button BtnCancelar;
     }
 }

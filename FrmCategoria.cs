@@ -54,5 +54,10 @@ namespace ProjetoCafeteria
             var form = new FrmCategoriaLocalizar();
             form.ShowDialog();
         }
+
+        private void TextCategoria_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

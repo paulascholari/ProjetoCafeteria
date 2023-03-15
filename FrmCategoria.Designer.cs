@@ -74,6 +74,7 @@
             this.TextCategoria.Name = "TextCategoria";
             this.TextCategoria.Size = new System.Drawing.Size(263, 20);
             this.TextCategoria.TabIndex = 10;
+            this.TextCategoria.TextChanged += new System.EventHandler(this.TextCategoria_TextChanged);
             // 
             // panel1
             // 
