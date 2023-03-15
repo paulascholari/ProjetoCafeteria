@@ -118,6 +118,7 @@
             this.BtnLocalizar.TabIndex = 28;
             this.BtnLocalizar.Text = "Localizar";
             this.BtnLocalizar.UseVisualStyleBackColor = true;
+            this.BtnLocalizar.Click += new System.EventHandler(this.BtnLocalizar_Click);
             // 
             // BtnSalvar
             // 

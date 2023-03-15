@@ -40,12 +40,19 @@ namespace ProjetoCafeteria
                     VALUES ('{Categoria}')";
                   //executa o comando 
                 BD.RetornaDatatable(sql);
+                Close();
             }
             else
             {
                 // ele mostra a messagem caso o campo esteja vazio 
                 MessageBox.Show("Há Campos vazios", Text, MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
+        }
+
+        private void BtnLocalizar_Click(object sender, EventArgs e)
+        {
+            var form = new FrmCategoriaLocalizar();
+            form.ShowDialog();
         }
     }
 }
