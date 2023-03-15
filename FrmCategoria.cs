@@ -66,5 +66,13 @@ namespace ProjetoCafeteria
         {
 
         }
+
+        private void BtnExcluir_Click(object sender, EventArgs e)
+        {
+            var codigo = TextCodigo.Text.Trim();
+            var sql = $@"delete from Categorias where IdCategoria = {codigo}";
+            BD.RetornaDatatable(sql);
+            Close();
+        }
     }
 }

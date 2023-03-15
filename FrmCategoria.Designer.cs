@@ -93,13 +93,13 @@
             // 
             // BtnExcluir
             // 
-            this.BtnExcluir.Enabled = false;
             this.BtnExcluir.Location = new System.Drawing.Point(253, 16);
             this.BtnExcluir.Name = "BtnExcluir";
             this.BtnExcluir.Size = new System.Drawing.Size(75, 23);
             this.BtnExcluir.TabIndex = 30;
             this.BtnExcluir.Text = "Excluir";
             this.BtnExcluir.UseVisualStyleBackColor = true;
+            this.BtnExcluir.Click += new System.EventHandler(this.BtnExcluir_Click);
             // 
             // BtnFechar
             // 
@@ -142,7 +142,6 @@
             // 
             // BtnCancelar
             // 
-            this.BtnCancelar.Enabled = false;
             this.BtnCancelar.Location = new System.Drawing.Point(172, 16);
             this.BtnCancelar.Name = "BtnCancelar";
             this.BtnCancelar.Size = new System.Drawing.Size(75, 23);
