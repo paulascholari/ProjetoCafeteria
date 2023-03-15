@@ -70,6 +70,9 @@ namespace ProjetoCafeteria
             TextCodigo.Text = categoria[0].ToString();
             // atribuindo o segundo item do categoria ao campo de categoria
             TextCategoria.Text = categoria[1].ToString();
+
+            BtnCancelar.Enabled = true;
+            BtnExcluir.Enabled = true;
         }
 
         private void TextCategoria_TextChanged(object sender, EventArgs e)
@@ -87,6 +90,14 @@ namespace ProjetoCafeteria
             BD.RetornaDatatable(sql);
             //fechando assim que deletar 
             Close();
+        }
+
+        private void BtnCancelar_Click(object sender, EventArgs e)
+        {
+            TextCodigo.Text= string.Empty;
+            TextCategoria.Text= string.Empty;   
+            BtnCancelar.Enabled = false;
+            BtnExcluir .Enabled = false;    
         }
     }
 }
