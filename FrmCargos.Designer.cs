@@ -37,7 +37,6 @@
             this.BtnFechar = new System.Windows.Forms.Button();
             this.BtnLocalizar = new System.Windows.Forms.Button();
             this.BtnSalvar = new System.Windows.Forms.Button();
-            this.BtnNovo = new System.Windows.Forms.Button();
             this.BtnCancelar = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -52,6 +51,7 @@
             // 
             // TextCodigo
             // 
+            this.TextCodigo.Enabled = false;
             this.TextCodigo.Location = new System.Drawing.Point(12, 25);
             this.TextCodigo.Name = "TextCodigo";
             this.TextCodigo.Size = new System.Drawing.Size(56, 20);
@@ -82,7 +82,6 @@
             this.panel1.Controls.Add(this.BtnFechar);
             this.panel1.Controls.Add(this.BtnLocalizar);
             this.panel1.Controls.Add(this.BtnSalvar);
-            this.panel1.Controls.Add(this.BtnNovo);
             this.panel1.Controls.Add(this.BtnCancelar);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panel1.Location = new System.Drawing.Point(0, 104);
@@ -93,7 +92,7 @@
             // BtnExcluir
             // 
             this.BtnExcluir.Enabled = false;
-            this.BtnExcluir.Location = new System.Drawing.Point(253, 16);
+            this.BtnExcluir.Location = new System.Drawing.Point(172, 16);
             this.BtnExcluir.Name = "BtnExcluir";
             this.BtnExcluir.Size = new System.Drawing.Size(75, 23);
             this.BtnExcluir.TabIndex = 30;
@@ -102,16 +101,17 @@
             // 
             // BtnFechar
             // 
-            this.BtnFechar.Location = new System.Drawing.Point(432, 16);
+            this.BtnFechar.Location = new System.Drawing.Point(351, 16);
             this.BtnFechar.Name = "BtnFechar";
             this.BtnFechar.Size = new System.Drawing.Size(75, 23);
             this.BtnFechar.TabIndex = 29;
             this.BtnFechar.Text = "Fechar";
             this.BtnFechar.UseVisualStyleBackColor = true;
+            this.BtnFechar.Click += new System.EventHandler(this.BtnFechar_Click);
             // 
             // BtnLocalizar
             // 
-            this.BtnLocalizar.Location = new System.Drawing.Point(334, 16);
+            this.BtnLocalizar.Location = new System.Drawing.Point(253, 16);
             this.BtnLocalizar.Name = "BtnLocalizar";
             this.BtnLocalizar.Size = new System.Drawing.Size(75, 23);
             this.BtnLocalizar.TabIndex = 28;
@@ -121,7 +121,7 @@
             // 
             // BtnSalvar
             // 
-            this.BtnSalvar.Location = new System.Drawing.Point(91, 16);
+            this.BtnSalvar.Location = new System.Drawing.Point(10, 16);
             this.BtnSalvar.Name = "BtnSalvar";
             this.BtnSalvar.Size = new System.Drawing.Size(75, 23);
             this.BtnSalvar.TabIndex = 27;
@@ -129,19 +129,10 @@
             this.BtnSalvar.UseVisualStyleBackColor = true;
             this.BtnSalvar.Click += new System.EventHandler(this.BtnSalvar_Click);
             // 
-            // BtnNovo
-            // 
-            this.BtnNovo.Location = new System.Drawing.Point(10, 16);
-            this.BtnNovo.Name = "BtnNovo";
-            this.BtnNovo.Size = new System.Drawing.Size(75, 23);
-            this.BtnNovo.TabIndex = 25;
-            this.BtnNovo.Text = "Novo";
-            this.BtnNovo.UseVisualStyleBackColor = true;
-            // 
             // BtnCancelar
             // 
             this.BtnCancelar.Enabled = false;
-            this.BtnCancelar.Location = new System.Drawing.Point(172, 16);
+            this.BtnCancelar.Location = new System.Drawing.Point(91, 16);
             this.BtnCancelar.Name = "BtnCancelar";
             this.BtnCancelar.Size = new System.Drawing.Size(75, 23);
             this.BtnCancelar.TabIndex = 26;
@@ -159,7 +150,7 @@
             this.Controls.Add(this.TextCodigo);
             this.Controls.Add(this.TextCargo);
             this.Name = "FrmCargos";
-            this.Text = "CargosRelatorios";
+            this.Text = "Gerenciamento De Cargo";
             this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -177,7 +168,6 @@
         private System.Windows.Forms.Button BtnFechar;
         private System.Windows.Forms.Button BtnLocalizar;
         private System.Windows.Forms.Button BtnSalvar;
-        private System.Windows.Forms.Button BtnNovo;
         private System.Windows.Forms.Button BtnCancelar;
     }
 }

@@ -24,8 +24,27 @@ namespace ProjetoCafeteria
 
         private void BtnLocalizar_Click(object sender, EventArgs e)
         {
-            var form = new FrmCategoriaLocalizar();
+
+            // abrindo a tela de localização de cargos
+            var form = new FrmLocalizar("IdCargo", "NomeDoCargo", "Cargos");
             form.ShowDialog();
+            // tratando os erros 
+            try
+            {
+                // pegando o item selecionado 
+                var Cargo = form.PegarItemSelecionado();
+                // atribuindo o primeiro item do cargo ao campo de codigo
+                TextCodigo.Text = Cargo[0].ToString();
+                // atribuindo o segundo item do cargo ao campo de Cargo
+                TextCargo.Text = Cargo[1].ToString();
+
+                BtnCancelar.Enabled = true;
+                BtnExcluir.Enabled = true;
+            }
+            catch
+            {
+                return;
+            }
         }
 
         private void BtnSalvar_Click(object sender, EventArgs e)
@@ -48,6 +67,11 @@ namespace ProjetoCafeteria
                 // ele mostra a messagem caso o campo esteja vazio 
                 MessageBox.Show("Há Campos vazios", Text, MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
+        }
+
+        private void BtnFechar_Click(object sender, EventArgs e)
+        {
+            Close();
         }
     }
 }

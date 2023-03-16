@@ -59,12 +59,6 @@
     <Compile Include="FrmCategoria.Designer.cs">
       <DependentUpon>FrmCategoria.cs</DependentUpon>
     </Compile>
-    <Compile Include="FrmCategoriaLocalizar.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FrmCategoriaLocalizar.Designer.cs">
-      <DependentUpon>FrmCategoriaLocalizar.cs</DependentUpon>
-    </Compile>
     <Compile Include="FrmCategoriaRealatorios.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -88,6 +82,12 @@
     </Compile>
     <Compile Include="FrmCargosRelatorios.Designer.cs">
       <DependentUpon>FrmCargosRelatorios.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmLocalizar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmLocalizar.Designer.cs">
+      <DependentUpon>FrmLocalizar.cs</DependentUpon>
     </Compile>
     <Compile Include="FrmPedidosFeitosRelatorios.cs">
       <SubType>Form</SubType>
@@ -154,9 +154,6 @@
     <EmbeddedResource Include="FrmCategoria.resx">
       <DependentUpon>FrmCategoria.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FrmCategoriaLocalizar.resx">
-      <DependentUpon>FrmCategoriaLocalizar.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="FrmCategoriaRealatorios.resx">
       <DependentUpon>FrmCategoriaRealatorios.cs</DependentUpon>
     </EmbeddedResource>
@@ -165,6 +162,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FrmClientes.resx">
       <DependentUpon>FrmClientes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmLocalizar.resx">
+      <DependentUpon>FrmLocalizar.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmPedidosFeitosRelatorios.resx">
       <DependentUpon>FrmPedidosFeitosRelatorios.cs</DependentUpon>

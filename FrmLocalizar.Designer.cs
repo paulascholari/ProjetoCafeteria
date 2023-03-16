@@ -1,6 +1,6 @@
 ﻿namespace ProjetoCafeteria
 {
-    partial class FrmCategoriaLocalizar
+    partial class FrmLocalizar
     {
         /// <summary>
         /// Required designer variable.
@@ -28,34 +28,34 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.ListaCategorias = new System.Windows.Forms.ListBox();
+            this.Lista = new System.Windows.Forms.ListBox();
             this.SuspendLayout();
             // 
-            // ListaCategorias
+            // Lista
             // 
-            this.ListaCategorias.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.ListaCategorias.FormattingEnabled = true;
-            this.ListaCategorias.Location = new System.Drawing.Point(0, 0);
-            this.ListaCategorias.Name = "ListaCategorias";
-            this.ListaCategorias.Size = new System.Drawing.Size(800, 450);
-            this.ListaCategorias.TabIndex = 1;
-            this.ListaCategorias.SelectedIndexChanged += new System.EventHandler(this.ListaCategorias_SelectedIndexChanged_1);
+            this.Lista.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.Lista.FormattingEnabled = true;
+            this.Lista.Location = new System.Drawing.Point(0, 0);
+            this.Lista.Name = "Lista";
+            this.Lista.Size = new System.Drawing.Size(800, 450);
+            this.Lista.TabIndex = 2;
+            this.Lista.SelectedIndexChanged += new System.EventHandler(this.Lista_SelectedIndexChanged);
             // 
-            // FrmCategoriaLocalizar
+            // FrmLocalizar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.ListaCategorias);
-            this.Name = "FrmCategoriaLocalizar";
-            this.Text = "FrmCategoriaLocalizar";
-            this.Load += new System.EventHandler(this.FrmCategoriaLocalizar_Load);
+            this.Controls.Add(this.Lista);
+            this.Name = "FrmLocalizar";
+            this.Text = "FrmLocalizar";
+            this.Load += new System.EventHandler(this.FrmLocalizar_Load);
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.ListBox ListaCategorias;
+        private System.Windows.Forms.ListBox Lista;
     }
 }

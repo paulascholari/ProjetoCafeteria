@@ -62,7 +62,7 @@ namespace ProjetoCafeteria
         private void BtnLocalizar_Click(object sender, EventArgs e)
         {
             // abrindo a tela de localização de categorias
-            var form = new FrmCategoriaLocalizar();
+            var form = new FrmLocalizar("IdCategoria", "NomeDaCategoria", "Categorias");
             form.ShowDialog();
             // tratando os erros 
             try
