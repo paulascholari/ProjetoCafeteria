@@ -15,7 +15,8 @@ namespace ProjetoCafeteria.Classes
         static SqlConnection con;
         public static void AbreBanco()
         {
-            stringConexao = @"Data Source=BOT0626782W10-2; Initial Catalog=LePetit;User Id=sa;Password=sasenac";
+            //stringConexao = @"Data Source=BOT0626782W10-2; Initial Catalog=LePetit;User Id=sa;Password=sasenac";
+            stringConexao = @"Data Source=DESKTOP-VJPS1VM\SQLEXPRESS; Initial Catalog=LePetit;User Id=sa;Password=sasenac";
 
             con = new SqlConnection();
             con.ConnectionString = stringConexao;
@@ -39,12 +40,21 @@ namespace ProjetoCafeteria.Classes
             cmd.CommandType = CommandType.Text;
             cmd.CommandText = sql;
 
-            SqlDataReader dr = cmd.ExecuteReader();
-            dt.Load(dr);
+            try
+            {
+                SqlDataReader dr = cmd.ExecuteReader(); 
+                dt.Load(dr);
 
-            dr.Close();
+                dr.Close();
 
-            return dt;
+                return dt;
+            }
+            catch 
+            {
+
+                throw new Exception();
+            }
+          
         }
 
         public static Int32 ExecutaComando(string sql, bool inclusão)

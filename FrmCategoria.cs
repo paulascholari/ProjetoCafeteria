@@ -94,10 +94,19 @@ namespace ProjetoCafeteria
             var codigo = TextCodigo.Text.Trim();
             // comando sql de exclusão 
             var sql = $@"delete from Categorias where IdCategoria = {codigo}";
-            //rodando o comando
-            BD.RetornaDatatable(sql);
-            //fechando assim que deletar 
-            Close();
+
+            // tratando o erro caso tenha itens que estão relacionados 
+            try
+            {
+                //rodando o comando
+                BD.RetornaDatatable(sql);
+                //fechando assim que deletar 
+                Close();
+            }
+            catch
+            {
+                MessageBox.Show(" Não foi possivel apagar", Text, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
         }
 
         private void BtnCancelar_Click(object sender, EventArgs e)

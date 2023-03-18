@@ -73,5 +73,26 @@ namespace ProjetoCafeteria
         {
             Close();
         }
+
+        private void BtnExcluir_Click(object sender, EventArgs e)
+        {
+            // pegando o codigo do Cargo selecionando e apagando os campos em branco
+            var codigo = TextCodigo.Text.Trim();
+            // comando sql de exclusão 
+            var sql = $@"delete from Cargos where IdCargo = {codigo}";
+
+            // tratando o erro caso tenha itens que estão relacionados 
+            try
+            {
+                //rodando o comando
+                BD.RetornaDatatable(sql);
+                //fechando assim que deletar 
+                Close();
+            }
+            catch
+            {
+                MessageBox.Show(" Não foi possivel apagar", Text, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+        }
     }
 }
