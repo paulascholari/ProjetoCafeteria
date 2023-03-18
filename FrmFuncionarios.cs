@@ -176,5 +176,35 @@ namespace ProjetoCafeteria
             foreach (var item in listaDeCampos)
                 item.Text = "";
         }
+
+        private void BtnExcluir_Click(object sender, EventArgs e)
+        {
+            // limpando o codigo e evitando o sql injection
+            var codigo=IdFuncionario.Text.Trim().Replace("'","");
+            //verificando se o codigo não esta vazio
+            if (codigo.Length > 0)
+            {
+                // tratando os erros quando tenta apagar no banco de dados
+                try
+                {
+                    // comando sql para exclusão
+                    var sql = $@"delete from Funcionarios where IdFuncionario = {codigo}";
+
+                    
+                    //rodando o comando
+                    BD.RetornaDatatable(sql);
+                    //fechando assim que deletar 
+                    Close();
+                    
+                    
+                }
+                catch 
+                {
+                    // caso ocorrer algum erro vai exibir a messagem
+                    MessageBox.Show(" Não foi possivel apagar", Text, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+
+                }
+            }
+        }
     }
 }
