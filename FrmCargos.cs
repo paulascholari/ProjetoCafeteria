@@ -94,5 +94,14 @@ namespace ProjetoCafeteria
                 MessageBox.Show(" Não foi possivel apagar", Text, MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
+
+        private void BtnCancelar_Click(object sender, EventArgs e)
+        {
+            // resetar todos os campos
+            TextCodigo.Text = string.Empty;
+            TextCargo.Text = string.Empty;
+            BtnCancelar.Enabled = false;
+            BtnExcluir.Enabled = false;
+        }
     }
 }

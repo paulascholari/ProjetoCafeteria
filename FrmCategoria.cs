@@ -111,6 +111,7 @@ namespace ProjetoCafeteria
 
         private void BtnCancelar_Click(object sender, EventArgs e)
         {
+            // resetar todos os campos
             TextCodigo.Text= string.Empty;
             TextCategoria.Text= string.Empty;   
             BtnCancelar.Enabled = false;
