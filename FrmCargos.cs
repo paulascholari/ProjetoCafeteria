@@ -49,7 +49,8 @@ namespace ProjetoCafeteria
 
         private void BtnSalvar_Click(object sender, EventArgs e)
         {
-
+            // limpando o codigo e evitando o sql injection
+            var codigo = TextCodigo.Text.Trim().Replace("'", "");
             //Replace evita o sql injection trim remove os espaços 
             var Cargo = TextCargo.Text.Replace("'", "").Trim();
             // verifica se o texto da cargo não esta vazio
@@ -58,6 +59,13 @@ namespace ProjetoCafeteria
                 //comando sql para inserir o item 
                 var sql = $@"INSERT INTO Cargos (NomeDoCargo)
                     VALUES ('{Cargo}')";
+                if(codigo.Length> 0)
+                {
+                    // comando sql para atualizar o item 
+                    sql = $@"UPDATE Cargos
+                        SET NomeDoCargo='{Cargo}'
+                        WHERE IdCargo={codigo}";
+                }
                 //executa o comando 
                 BD.RetornaDatatable(sql);
                 Close();

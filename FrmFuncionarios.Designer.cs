@@ -89,6 +89,7 @@
             this.BtnFechar.TabIndex = 47;
             this.BtnFechar.Text = "Fechar";
             this.BtnFechar.UseVisualStyleBackColor = true;
+            this.BtnFechar.Click += new System.EventHandler(this.BtnFechar_Click);
             // 
             // BtnLocalizar
             // 
@@ -102,6 +103,7 @@
             // 
             // BtnExcluir
             // 
+            this.BtnExcluir.Enabled = false;
             this.BtnExcluir.Location = new System.Drawing.Point(172, 17);
             this.BtnExcluir.Name = "BtnExcluir";
             this.BtnExcluir.Size = new System.Drawing.Size(75, 23);
@@ -112,6 +114,7 @@
             // 
             // BtnCancelar
             // 
+            this.BtnCancelar.Enabled = false;
             this.BtnCancelar.Location = new System.Drawing.Point(91, 17);
             this.BtnCancelar.Name = "BtnCancelar";
             this.BtnCancelar.Size = new System.Drawing.Size(75, 23);

@@ -29,6 +29,8 @@ namespace ProjetoCafeteria
 
         private void BtnSalvar_Click(object sender, EventArgs e)
         {
+            // limpando o codigo e evitando o sql injection
+            var codigo = IdFuncionario.Text.Trim().Replace("'", "");
             //esta listando todos os campos
             var listaDeCampos = new List<TextBox> {
                 NomeDoFuncionario,
@@ -60,9 +62,22 @@ namespace ProjetoCafeteria
                 //comando sql pegando todos os nomes e todos os valores
                 var sql = $@"INSERT INTO Funcionarios ({Nomes}, CargoId)
                 VALUES ({Valores},{ItemSelecionado[CargoId.SelectedIndex][0]})";
+                // se o tamanho for maior que 0 
+                if (codigo.Length > 0)
+                {
+                    //esta selecionando cada campo e transforma o campo em atualização
+                    //depois separa cada campo por virgula
+                    var atualizar = listaDeCampos.Select(x => $"[{x.Name}]='{x.Text}'")
+                        .Aggregate((a, b) => $"{a},{b}");
+                    //criando comando de sql de atualização
+                    sql = $@"UPDATE Funcionarios
+                        SET {atualizar},CargoId={ItemSelecionado[CargoId.SelectedIndex][0]}
+                        WHERE IdFuncionario={codigo}";
+                }
+
                 //rodando o comando no banco de dados
                 BD.RetornaDatatable(sql);
-
+                Close();
             }
             catch  
             {
@@ -175,6 +190,11 @@ namespace ProjetoCafeteria
             // limpando todos os campos 
             foreach (var item in listaDeCampos)
                 item.Text = "";
+
+            // resetar todos os botões
+          
+            BtnCancelar.Enabled = false;
+            BtnExcluir.Enabled = false;
         }
 
         private void BtnExcluir_Click(object sender, EventArgs e)
@@ -205,6 +225,11 @@ namespace ProjetoCafeteria
 
                 }
             }
+        }
+
+        private void BtnFechar_Click(object sender, EventArgs e)
+        {
+            Close();
         }
     }
 }
