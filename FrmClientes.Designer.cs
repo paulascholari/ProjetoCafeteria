@@ -29,17 +29,17 @@
         private void InitializeComponent()
         {
             this.label1 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.textBox7 = new System.Windows.Forms.TextBox();
-            this.textBox8 = new System.Windows.Forms.TextBox();
-            this.textBox9 = new System.Windows.Forms.TextBox();
-            this.textBox10 = new System.Windows.Forms.TextBox();
-            this.textBox11 = new System.Windows.Forms.TextBox();
+            this.Nome = new System.Windows.Forms.TextBox();
+            this.Logradouro = new System.Windows.Forms.TextBox();
+            this.CEP = new System.Windows.Forms.TextBox();
+            this.UF = new System.Windows.Forms.TextBox();
+            this.Municipio = new System.Windows.Forms.TextBox();
+            this.IdCliente = new System.Windows.Forms.TextBox();
+            this.Telefone = new System.Windows.Forms.TextBox();
+            this.TelefoneContato = new System.Windows.Forms.TextBox();
+            this.Numero = new System.Windows.Forms.TextBox();
+            this.Bairro = new System.Windows.Forms.TextBox();
+            this.Email = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
@@ -50,14 +50,14 @@
             this.label9 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
-            this.textBox12 = new System.Windows.Forms.TextBox();
+            this.EmailContato = new System.Windows.Forms.TextBox();
             this.label12 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.button6 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.BtnExcluir = new System.Windows.Forms.Button();
+            this.BtnFechar = new System.Windows.Forms.Button();
+            this.BtnLocalizar = new System.Windows.Forms.Button();
+            this.BtnSalvar = new System.Windows.Forms.Button();
+            this.BtnCancelar = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -70,83 +70,84 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "CODIGO";
             // 
-            // textBox1
+            // Nome
             // 
-            this.textBox1.Location = new System.Drawing.Point(12, 67);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(481, 20);
-            this.textBox1.TabIndex = 1;
+            this.Nome.Location = new System.Drawing.Point(12, 67);
+            this.Nome.Name = "Nome";
+            this.Nome.Size = new System.Drawing.Size(481, 20);
+            this.Nome.TabIndex = 1;
             // 
-            // textBox2
+            // Logradouro
             // 
-            this.textBox2.Location = new System.Drawing.Point(12, 105);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(257, 20);
-            this.textBox2.TabIndex = 2;
+            this.Logradouro.Location = new System.Drawing.Point(12, 105);
+            this.Logradouro.Name = "Logradouro";
+            this.Logradouro.Size = new System.Drawing.Size(257, 20);
+            this.Logradouro.TabIndex = 2;
             // 
-            // textBox3
+            // CEP
             // 
-            this.textBox3.Location = new System.Drawing.Point(12, 144);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(99, 20);
-            this.textBox3.TabIndex = 3;
-            this.textBox3.TextChanged += new System.EventHandler(this.textBox3_TextChanged);
+            this.CEP.Location = new System.Drawing.Point(12, 144);
+            this.CEP.Name = "CEP";
+            this.CEP.Size = new System.Drawing.Size(99, 20);
+            this.CEP.TabIndex = 3;
+            this.CEP.TextChanged += new System.EventHandler(this.textBox3_TextChanged);
             // 
-            // textBox4
+            // UF
             // 
-            this.textBox4.Location = new System.Drawing.Point(117, 144);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(26, 20);
-            this.textBox4.TabIndex = 4;
+            this.UF.Location = new System.Drawing.Point(117, 144);
+            this.UF.Name = "UF";
+            this.UF.Size = new System.Drawing.Size(26, 20);
+            this.UF.TabIndex = 4;
             // 
-            // textBox5
+            // Municipio
             // 
-            this.textBox5.Location = new System.Drawing.Point(149, 144);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(99, 20);
-            this.textBox5.TabIndex = 5;
+            this.Municipio.Location = new System.Drawing.Point(149, 144);
+            this.Municipio.Name = "Municipio";
+            this.Municipio.Size = new System.Drawing.Size(99, 20);
+            this.Municipio.TabIndex = 5;
             // 
-            // textBox6
+            // IdCliente
             // 
-            this.textBox6.Location = new System.Drawing.Point(12, 31);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(56, 20);
-            this.textBox6.TabIndex = 6;
+            this.IdCliente.Enabled = false;
+            this.IdCliente.Location = new System.Drawing.Point(12, 31);
+            this.IdCliente.Name = "IdCliente";
+            this.IdCliente.Size = new System.Drawing.Size(56, 20);
+            this.IdCliente.TabIndex = 6;
             // 
-            // textBox7
+            // Telefone
             // 
-            this.textBox7.Location = new System.Drawing.Point(12, 182);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(99, 20);
-            this.textBox7.TabIndex = 7;
+            this.Telefone.Location = new System.Drawing.Point(12, 182);
+            this.Telefone.Name = "Telefone";
+            this.Telefone.Size = new System.Drawing.Size(99, 20);
+            this.Telefone.TabIndex = 7;
             // 
-            // textBox8
+            // TelefoneContato
             // 
-            this.textBox8.Location = new System.Drawing.Point(117, 182);
-            this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(152, 20);
-            this.textBox8.TabIndex = 8;
+            this.TelefoneContato.Location = new System.Drawing.Point(117, 182);
+            this.TelefoneContato.Name = "TelefoneContato";
+            this.TelefoneContato.Size = new System.Drawing.Size(152, 20);
+            this.TelefoneContato.TabIndex = 8;
             // 
-            // textBox9
+            // Numero
             // 
-            this.textBox9.Location = new System.Drawing.Point(275, 105);
-            this.textBox9.Name = "textBox9";
-            this.textBox9.Size = new System.Drawing.Size(26, 20);
-            this.textBox9.TabIndex = 9;
+            this.Numero.Location = new System.Drawing.Point(275, 105);
+            this.Numero.Name = "Numero";
+            this.Numero.Size = new System.Drawing.Size(26, 20);
+            this.Numero.TabIndex = 9;
             // 
-            // textBox10
+            // Bairro
             // 
-            this.textBox10.Location = new System.Drawing.Point(307, 105);
-            this.textBox10.Name = "textBox10";
-            this.textBox10.Size = new System.Drawing.Size(186, 20);
-            this.textBox10.TabIndex = 10;
+            this.Bairro.Location = new System.Drawing.Point(307, 105);
+            this.Bairro.Name = "Bairro";
+            this.Bairro.Size = new System.Drawing.Size(186, 20);
+            this.Bairro.TabIndex = 10;
             // 
-            // textBox11
+            // Email
             // 
-            this.textBox11.Location = new System.Drawing.Point(12, 224);
-            this.textBox11.Name = "textBox11";
-            this.textBox11.Size = new System.Drawing.Size(257, 20);
-            this.textBox11.TabIndex = 11;
+            this.Email.Location = new System.Drawing.Point(12, 224);
+            this.Email.Name = "Email";
+            this.Email.Size = new System.Drawing.Size(257, 20);
+            this.Email.TabIndex = 11;
             // 
             // label2
             // 
@@ -239,12 +240,12 @@
             this.label11.TabIndex = 21;
             this.label11.Text = "EMAIL";
             // 
-            // textBox12
+            // EmailContato
             // 
-            this.textBox12.Location = new System.Drawing.Point(275, 224);
-            this.textBox12.Name = "textBox12";
-            this.textBox12.Size = new System.Drawing.Size(186, 20);
-            this.textBox12.TabIndex = 22;
+            this.EmailContato.Location = new System.Drawing.Point(275, 224);
+            this.EmailContato.Name = "EmailContato";
+            this.EmailContato.Size = new System.Drawing.Size(186, 20);
+            this.EmailContato.TabIndex = 22;
             // 
             // label12
             // 
@@ -258,62 +259,68 @@
             // panel1
             // 
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.panel1.Controls.Add(this.button6);
-            this.panel1.Controls.Add(this.button5);
-            this.panel1.Controls.Add(this.button4);
-            this.panel1.Controls.Add(this.button3);
-            this.panel1.Controls.Add(this.button2);
+            this.panel1.Controls.Add(this.BtnExcluir);
+            this.panel1.Controls.Add(this.BtnFechar);
+            this.panel1.Controls.Add(this.BtnLocalizar);
+            this.panel1.Controls.Add(this.BtnSalvar);
+            this.panel1.Controls.Add(this.BtnCancelar);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panel1.Location = new System.Drawing.Point(0, 250);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(800, 53);
             this.panel1.TabIndex = 24;
             // 
-            // button6
+            // BtnExcluir
             // 
-            this.button6.Location = new System.Drawing.Point(172, 16);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(75, 23);
-            this.button6.TabIndex = 30;
-            this.button6.Text = "Excluir";
-            this.button6.UseVisualStyleBackColor = true;
+            this.BtnExcluir.Enabled = false;
+            this.BtnExcluir.Location = new System.Drawing.Point(172, 16);
+            this.BtnExcluir.Name = "BtnExcluir";
+            this.BtnExcluir.Size = new System.Drawing.Size(75, 23);
+            this.BtnExcluir.TabIndex = 30;
+            this.BtnExcluir.Text = "Excluir";
+            this.BtnExcluir.UseVisualStyleBackColor = true;
+            this.BtnExcluir.Click += new System.EventHandler(this.BtnExcluir_Click);
             // 
-            // button5
+            // BtnFechar
             // 
-            this.button5.Location = new System.Drawing.Point(351, 16);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(75, 23);
-            this.button5.TabIndex = 29;
-            this.button5.Text = "Fechar";
-            this.button5.UseVisualStyleBackColor = true;
+            this.BtnFechar.Location = new System.Drawing.Point(351, 16);
+            this.BtnFechar.Name = "BtnFechar";
+            this.BtnFechar.Size = new System.Drawing.Size(75, 23);
+            this.BtnFechar.TabIndex = 29;
+            this.BtnFechar.Text = "Fechar";
+            this.BtnFechar.UseVisualStyleBackColor = true;
+            this.BtnFechar.Click += new System.EventHandler(this.BtnFechar_Click);
             // 
-            // button4
+            // BtnLocalizar
             // 
-            this.button4.Location = new System.Drawing.Point(253, 16);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(75, 23);
-            this.button4.TabIndex = 28;
-            this.button4.Text = "Localizar";
-            this.button4.UseVisualStyleBackColor = true;
+            this.BtnLocalizar.Location = new System.Drawing.Point(253, 16);
+            this.BtnLocalizar.Name = "BtnLocalizar";
+            this.BtnLocalizar.Size = new System.Drawing.Size(75, 23);
+            this.BtnLocalizar.TabIndex = 28;
+            this.BtnLocalizar.Text = "Localizar";
+            this.BtnLocalizar.UseVisualStyleBackColor = true;
+            this.BtnLocalizar.Click += new System.EventHandler(this.BtnLocalizar_Click);
             // 
-            // button3
+            // BtnSalvar
             // 
-            this.button3.Location = new System.Drawing.Point(10, 16);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(75, 23);
-            this.button3.TabIndex = 27;
-            this.button3.Text = "Salvar";
-            this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
+            this.BtnSalvar.Location = new System.Drawing.Point(10, 16);
+            this.BtnSalvar.Name = "BtnSalvar";
+            this.BtnSalvar.Size = new System.Drawing.Size(75, 23);
+            this.BtnSalvar.TabIndex = 27;
+            this.BtnSalvar.Text = "Salvar";
+            this.BtnSalvar.UseVisualStyleBackColor = true;
+            this.BtnSalvar.Click += new System.EventHandler(this.button3_Click);
             // 
-            // button2
+            // BtnCancelar
             // 
-            this.button2.Location = new System.Drawing.Point(91, 16);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
-            this.button2.TabIndex = 26;
-            this.button2.Text = "Cancelar";
-            this.button2.UseVisualStyleBackColor = true;
+            this.BtnCancelar.Enabled = false;
+            this.BtnCancelar.Location = new System.Drawing.Point(91, 16);
+            this.BtnCancelar.Name = "BtnCancelar";
+            this.BtnCancelar.Size = new System.Drawing.Size(75, 23);
+            this.BtnCancelar.TabIndex = 26;
+            this.BtnCancelar.Text = "Cancelar";
+            this.BtnCancelar.UseVisualStyleBackColor = true;
+            this.BtnCancelar.Click += new System.EventHandler(this.BtnCancelar_Click);
             // 
             // FrmClientes
             // 
@@ -322,7 +329,7 @@
             this.ClientSize = new System.Drawing.Size(800, 303);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.label12);
-            this.Controls.Add(this.textBox12);
+            this.Controls.Add(this.EmailContato);
             this.Controls.Add(this.label11);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.label9);
@@ -333,17 +340,17 @@
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.textBox11);
-            this.Controls.Add(this.textBox10);
-            this.Controls.Add(this.textBox9);
-            this.Controls.Add(this.textBox8);
-            this.Controls.Add(this.textBox7);
-            this.Controls.Add(this.textBox6);
-            this.Controls.Add(this.textBox5);
-            this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.Email);
+            this.Controls.Add(this.Bairro);
+            this.Controls.Add(this.Numero);
+            this.Controls.Add(this.TelefoneContato);
+            this.Controls.Add(this.Telefone);
+            this.Controls.Add(this.IdCliente);
+            this.Controls.Add(this.Municipio);
+            this.Controls.Add(this.UF);
+            this.Controls.Add(this.CEP);
+            this.Controls.Add(this.Logradouro);
+            this.Controls.Add(this.Nome);
             this.Controls.Add(this.label1);
             this.Name = "FrmClientes";
             this.Text = "Clientes";
@@ -356,17 +363,17 @@
         #endregion
 
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.TextBox textBox6;
-        private System.Windows.Forms.TextBox textBox7;
-        private System.Windows.Forms.TextBox textBox8;
-        private System.Windows.Forms.TextBox textBox9;
-        private System.Windows.Forms.TextBox textBox10;
-        private System.Windows.Forms.TextBox textBox11;
+        private System.Windows.Forms.TextBox Nome;
+        private System.Windows.Forms.TextBox Logradouro;
+        private System.Windows.Forms.TextBox CEP;
+        private System.Windows.Forms.TextBox UF;
+        private System.Windows.Forms.TextBox Municipio;
+        private System.Windows.Forms.TextBox IdCliente;
+        private System.Windows.Forms.TextBox Telefone;
+        private System.Windows.Forms.TextBox TelefoneContato;
+        private System.Windows.Forms.TextBox Numero;
+        private System.Windows.Forms.TextBox Bairro;
+        private System.Windows.Forms.TextBox Email;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
@@ -377,13 +384,13 @@
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.TextBox textBox12;
+        private System.Windows.Forms.TextBox EmailContato;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button6;
+        private System.Windows.Forms.Button BtnFechar;
+        private System.Windows.Forms.Button BtnLocalizar;
+        private System.Windows.Forms.Button BtnSalvar;
+        private System.Windows.Forms.Button BtnCancelar;
+        private System.Windows.Forms.Button BtnExcluir;
     }
 }
