@@ -60,10 +60,10 @@
             this.NomeDoFuncionario = new System.Windows.Forms.TextBox();
             this.IdFuncionario = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.IdCargo = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.Password = new System.Windows.Forms.TextBox();
+            this.CargoId = new System.Windows.Forms.ComboBox();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -98,6 +98,7 @@
             this.BtnLocalizar.TabIndex = 46;
             this.BtnLocalizar.Text = "Localizar";
             this.BtnLocalizar.UseVisualStyleBackColor = true;
+            this.BtnLocalizar.Click += new System.EventHandler(this.BtnLocalizar_Click);
             // 
             // BtnExcluir
             // 
@@ -116,6 +117,7 @@
             this.BtnCancelar.TabIndex = 44;
             this.BtnCancelar.Text = "Cancelar";
             this.BtnCancelar.UseVisualStyleBackColor = true;
+            this.BtnCancelar.Click += new System.EventHandler(this.BtnCancelar_Click);
             // 
             // BtnSalvar
             // 
@@ -323,6 +325,7 @@
             // 
             // IdFuncionario
             // 
+            this.IdFuncionario.Enabled = false;
             this.IdFuncionario.Location = new System.Drawing.Point(12, 25);
             this.IdFuncionario.Name = "IdFuncionario";
             this.IdFuncionario.Size = new System.Drawing.Size(56, 20);
@@ -336,14 +339,6 @@
             this.label1.Size = new System.Drawing.Size(49, 13);
             this.label1.TabIndex = 64;
             this.label1.Text = "CODIGO";
-            // 
-            // IdCargo
-            // 
-            this.IdCargo.FormattingEnabled = true;
-            this.IdCargo.Location = new System.Drawing.Point(411, 63);
-            this.IdCargo.Name = "IdCargo";
-            this.IdCargo.Size = new System.Drawing.Size(121, 21);
-            this.IdCargo.TabIndex = 66;
             // 
             // label2
             // 
@@ -371,15 +366,23 @@
             this.Password.Size = new System.Drawing.Size(116, 20);
             this.Password.TabIndex = 68;
             // 
+            // CargoId
+            // 
+            this.CargoId.FormattingEnabled = true;
+            this.CargoId.Location = new System.Drawing.Point(412, 64);
+            this.CargoId.Name = "CargoId";
+            this.CargoId.Size = new System.Drawing.Size(121, 21);
+            this.CargoId.TabIndex = 70;
+            // 
             // FrmFuncionarios
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 374);
+            this.Controls.Add(this.CargoId);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.Password);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.IdCargo);
             this.Controls.Add(this.IdFuncionario);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.panel1);
@@ -449,9 +452,9 @@
         private System.Windows.Forms.TextBox NomeDoFuncionario;
         private System.Windows.Forms.TextBox IdFuncionario;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.ComboBox IdCargo;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox Password;
+        private System.Windows.Forms.ComboBox CargoId;
     }
 }

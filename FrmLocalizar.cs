@@ -20,10 +20,26 @@ namespace ProjetoCafeteria
         /// <param name="idColuna"></param>
         /// <param name="nomeColuna"></param>
         /// <param name="tabela"></param>
-        public FrmLocalizar(string idColuna,string nomeColuna,string tabela)
+        public FrmLocalizar(string idColuna, string nomeColuna, string tabela)
         {
             // esta criando o comando sql  
             var sql = $@"Select {idColuna} ,{nomeColuna}  From {tabela}";
+            // Esta executando o comando sql e salvando as linhas dentro da propriedade item selecionado
+            ItemSelecionado = BD.RetornaDatatable(sql).Rows;
+            InitializeComponent();
+        }
+        /// <summary>
+        /// assim que a tela e instanciada e pedido a coluna do id ,coluna nome e o nome da tabela
+        /// </summary>
+        /// <param name="colunas">
+        /// obs: a primeira coluna tem que ser o id da tabela e a segunda coluna deve ser o texto mostrado
+        /// </param>
+        /// <param name="tabela"></param>
+        public FrmLocalizar(ICollection<string> colunas, string tabela)
+        {
+            var nomes = colunas.Aggregate((a, b) => $"{a},{b}");
+            // esta criando o comando sql  
+            var sql = $@"Select {nomes} From {tabela}";
             // Esta executando o comando sql e salvando as linhas dentro da propriedade item selecionado
             ItemSelecionado = BD.RetornaDatatable(sql).Rows;
             InitializeComponent();

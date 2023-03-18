@@ -6,6 +6,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Reflection;
 using System.Reflection.Emit;
 using System.Text;
 using System.Threading.Tasks;
@@ -58,7 +59,7 @@ namespace ProjetoCafeteria
             {
                 //comando sql pegando todos os nomes e todos os valores
                 var sql = $@"INSERT INTO Funcionarios ({Nomes}, CargoId)
-                VALUES ({Valores},{ItemSelecionado[IdCargo.SelectedIndex][0]})";
+                VALUES ({Valores},{ItemSelecionado[CargoId.SelectedIndex][0]})";
                 //rodando o comando no banco de dados
                 BD.RetornaDatatable(sql);
 
@@ -84,9 +85,96 @@ namespace ProjetoCafeteria
             {
                 // adicionando na lista de seleção 
                 
-                IdCargo.Items.Add(row[1].ToString());
+                CargoId.Items.Add(row[1].ToString());
 
             }
+        }
+
+        private void BtnLocalizar_Click(object sender, EventArgs e)
+        {
+            //esta listando todos os campos
+            var listaDeCampos = new List<Control> {
+                IdFuncionario,
+                NomeDoFuncionario,
+                Logradouro,
+                Bairro,
+                NumeroDaCasa,
+                UF,
+                CEP,
+                Municipio,
+                Telefone,
+                TelefoneContato,
+                Email,
+                EmailContato,
+                Observação,
+                Password,
+                CargoId,
+            };
+            var Nomes = listaDeCampos.Select(x => $"[{x.Name}]").ToList();
+            // abrindo a tela de localização de funcionarios
+            var form = new FrmLocalizar( Nomes, "Funcionarios");
+            form.ShowDialog();
+            // tratando os erros 
+            try
+            {
+                // pegando o item selecionado 
+                var Funcionario = form.PegarItemSelecionado();
+                // percorre a listaDeCampos pegando a posição atual para então pegar o valor do
+                // item na tabela e passando para o campo respectivo
+                for (int i = 0; i < listaDeCampos.Count; i++)
+                {
+                    // checa se o nome é o mesmo do campo de cargo porque ele é um campo de seleção
+                    if (listaDeCampos[i].Name == CargoId.Name)
+                        // Percorre a propriedade itemselecionado e verifica se o Cargo
+                        // é o mesmo do funcionario localizado e quebra o loop passando
+                        // o index selecionado para o campo de cargo
+                        for (int j = 0; j < ItemSelecionado.Count; j++)
+                        {
+                            if (ItemSelecionado[j][0].ToString() == Funcionario[i].ToString())
+                            {
+                                CargoId.SelectedIndex = j;
+                                break;
+                            }
+                        }
+                    // Caso o item não seja o campo cargo, o texto dos outros itens é alterado
+                    // pelo valor do item do banco de dados
+                    else
+                        listaDeCampos[i].Text = Funcionario[i].ToString();
+                }
+
+                BtnCancelar.Enabled = true;
+                BtnExcluir.Enabled = true;
+            }
+            catch
+            {
+                return;
+            }
+        }
+
+        private void BtnCancelar_Click(object sender, EventArgs e)
+        {
+            //esta listando todos os campos
+            var listaDeCampos = new List<TextBox> {
+                NomeDoFuncionario,
+                Logradouro,
+                Bairro,
+                NumeroDaCasa,
+                UF,
+                CEP,
+                Municipio,
+                Telefone,
+                TelefoneContato,
+                Email,
+                EmailContato,
+                Observação,
+                Password,
+                IdFuncionario,
+            };
+            //resetando o campo cargo 
+            CargoId.SelectedIndex = -1;
+            // limpando todos os campos 
+            foreach (var item in listaDeCampos)
+                item.Text = "";
         }
     }
 }
