@@ -28,30 +28,29 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.IdPedido = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.button6 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.listBox1 = new System.Windows.Forms.ListBox();
-            this.button7 = new System.Windows.Forms.Button();
-            this.button8 = new System.Windows.Forms.Button();
+            this.BtnExcluir = new System.Windows.Forms.Button();
+            this.BtnFechar = new System.Windows.Forms.Button();
+            this.BtnLocalizar = new System.Windows.Forms.Button();
+            this.BtnSalvar = new System.Windows.Forms.Button();
+            this.BtnCancelar = new System.Windows.Forms.Button();
+            this.ListaProdutos = new System.Windows.Forms.ListBox();
+            this.BtnAdicionarProduto = new System.Windows.Forms.Button();
+            this.BtnExcluirProduto = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.ClienteId = new System.Windows.Forms.ComboBox();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
-            // textBox1
+            // IdPedido
             // 
-            this.textBox1.Location = new System.Drawing.Point(17, 25);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(50, 20);
-            this.textBox1.TabIndex = 11;
+            this.IdPedido.Location = new System.Drawing.Point(17, 25);
+            this.IdPedido.Name = "IdPedido";
+            this.IdPedido.Size = new System.Drawing.Size(50, 20);
+            this.IdPedido.TabIndex = 11;
             // 
             // label1
             // 
@@ -74,101 +73,91 @@
             // panel1
             // 
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.panel1.Controls.Add(this.button6);
-            this.panel1.Controls.Add(this.button5);
-            this.panel1.Controls.Add(this.button4);
-            this.panel1.Controls.Add(this.button3);
-            this.panel1.Controls.Add(this.button1);
-            this.panel1.Controls.Add(this.button2);
+            this.panel1.Controls.Add(this.BtnExcluir);
+            this.panel1.Controls.Add(this.BtnFechar);
+            this.panel1.Controls.Add(this.BtnLocalizar);
+            this.panel1.Controls.Add(this.BtnSalvar);
+            this.panel1.Controls.Add(this.BtnCancelar);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panel1.Location = new System.Drawing.Point(0, 253);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(800, 53);
             this.panel1.TabIndex = 26;
             // 
-            // button6
+            // BtnExcluir
             // 
-            this.button6.Location = new System.Drawing.Point(253, 16);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(75, 23);
-            this.button6.TabIndex = 30;
-            this.button6.Text = "Excluir";
-            this.button6.UseVisualStyleBackColor = true;
+            this.BtnExcluir.Location = new System.Drawing.Point(178, 16);
+            this.BtnExcluir.Name = "BtnExcluir";
+            this.BtnExcluir.Size = new System.Drawing.Size(75, 23);
+            this.BtnExcluir.TabIndex = 30;
+            this.BtnExcluir.Text = "Excluir";
+            this.BtnExcluir.UseVisualStyleBackColor = true;
             // 
-            // button5
+            // BtnFechar
             // 
-            this.button5.Location = new System.Drawing.Point(432, 16);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(75, 23);
-            this.button5.TabIndex = 29;
-            this.button5.Text = "Fechar";
-            this.button5.UseVisualStyleBackColor = true;
+            this.BtnFechar.Location = new System.Drawing.Point(357, 16);
+            this.BtnFechar.Name = "BtnFechar";
+            this.BtnFechar.Size = new System.Drawing.Size(75, 23);
+            this.BtnFechar.TabIndex = 29;
+            this.BtnFechar.Text = "Fechar";
+            this.BtnFechar.UseVisualStyleBackColor = true;
             // 
-            // button4
+            // BtnLocalizar
             // 
-            this.button4.Location = new System.Drawing.Point(334, 16);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(75, 23);
-            this.button4.TabIndex = 28;
-            this.button4.Text = "Localizar";
-            this.button4.UseVisualStyleBackColor = true;
+            this.BtnLocalizar.Location = new System.Drawing.Point(259, 16);
+            this.BtnLocalizar.Name = "BtnLocalizar";
+            this.BtnLocalizar.Size = new System.Drawing.Size(75, 23);
+            this.BtnLocalizar.TabIndex = 28;
+            this.BtnLocalizar.Text = "Localizar";
+            this.BtnLocalizar.UseVisualStyleBackColor = true;
+            this.BtnLocalizar.Click += new System.EventHandler(this.BtnLocalizar_Click);
             // 
-            // button3
+            // BtnSalvar
             // 
-            this.button3.Location = new System.Drawing.Point(91, 16);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(75, 23);
-            this.button3.TabIndex = 27;
-            this.button3.Text = "Salvar";
-            this.button3.UseVisualStyleBackColor = true;
+            this.BtnSalvar.Location = new System.Drawing.Point(16, 16);
+            this.BtnSalvar.Name = "BtnSalvar";
+            this.BtnSalvar.Size = new System.Drawing.Size(75, 23);
+            this.BtnSalvar.TabIndex = 27;
+            this.BtnSalvar.Text = "Salvar";
+            this.BtnSalvar.UseVisualStyleBackColor = true;
+            this.BtnSalvar.Click += new System.EventHandler(this.BtnSalvar_Click);
             // 
-            // button1
+            // BtnCancelar
             // 
-            this.button1.Location = new System.Drawing.Point(10, 16);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 25;
-            this.button1.Text = "Novo";
-            this.button1.UseVisualStyleBackColor = true;
+            this.BtnCancelar.Location = new System.Drawing.Point(97, 16);
+            this.BtnCancelar.Name = "BtnCancelar";
+            this.BtnCancelar.Size = new System.Drawing.Size(75, 23);
+            this.BtnCancelar.TabIndex = 26;
+            this.BtnCancelar.Text = "Cancelar";
+            this.BtnCancelar.UseVisualStyleBackColor = true;
             // 
-            // button2
+            // ListaProdutos
             // 
-            this.button2.Location = new System.Drawing.Point(172, 16);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
-            this.button2.TabIndex = 26;
-            this.button2.Text = "Cancelar";
-            this.button2.UseVisualStyleBackColor = true;
+            this.ListaProdutos.FormattingEnabled = true;
+            this.ListaProdutos.Location = new System.Drawing.Point(18, 104);
+            this.ListaProdutos.Name = "ListaProdutos";
+            this.ListaProdutos.Size = new System.Drawing.Size(205, 95);
+            this.ListaProdutos.TabIndex = 27;
             // 
-            // listBox1
+            // BtnAdicionarProduto
             // 
-            this.listBox1.FormattingEnabled = true;
-            this.listBox1.Items.AddRange(new object[] {
-            "Café",
-            "Pão",
-            "Suco"});
-            this.listBox1.Location = new System.Drawing.Point(18, 104);
-            this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(205, 95);
-            this.listBox1.TabIndex = 27;
+            this.BtnAdicionarProduto.Location = new System.Drawing.Point(27, 205);
+            this.BtnAdicionarProduto.Name = "BtnAdicionarProduto";
+            this.BtnAdicionarProduto.Size = new System.Drawing.Size(75, 23);
+            this.BtnAdicionarProduto.TabIndex = 28;
+            this.BtnAdicionarProduto.Text = "Adicionar";
+            this.BtnAdicionarProduto.UseVisualStyleBackColor = true;
+            this.BtnAdicionarProduto.Click += new System.EventHandler(this.BtnAdicionarProduto_Click);
             // 
-            // button7
+            // BtnExcluirProduto
             // 
-            this.button7.Location = new System.Drawing.Point(27, 205);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(75, 23);
-            this.button7.TabIndex = 28;
-            this.button7.Text = "Adicionar";
-            this.button7.UseVisualStyleBackColor = true;
-            // 
-            // button8
-            // 
-            this.button8.Location = new System.Drawing.Point(123, 205);
-            this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(75, 23);
-            this.button8.TabIndex = 29;
-            this.button8.Text = "Excluir";
-            this.button8.UseVisualStyleBackColor = true;
+            this.BtnExcluirProduto.Location = new System.Drawing.Point(123, 205);
+            this.BtnExcluirProduto.Name = "BtnExcluirProduto";
+            this.BtnExcluirProduto.Size = new System.Drawing.Size(75, 23);
+            this.BtnExcluirProduto.TabIndex = 29;
+            this.BtnExcluirProduto.Text = "Excluir";
+            this.BtnExcluirProduto.UseVisualStyleBackColor = true;
+            this.BtnExcluirProduto.Click += new System.EventHandler(this.BtnExcluirProduto_Click);
             // 
             // label3
             // 
@@ -179,30 +168,31 @@
             this.label3.TabIndex = 30;
             this.label3.Text = "PRODUTOS";
             // 
-            // comboBox1
+            // ClienteId
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(18, 64);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(205, 21);
-            this.comboBox1.TabIndex = 31;
+            this.ClienteId.FormattingEnabled = true;
+            this.ClienteId.Location = new System.Drawing.Point(18, 64);
+            this.ClienteId.Name = "ClienteId";
+            this.ClienteId.Size = new System.Drawing.Size(205, 21);
+            this.ClienteId.TabIndex = 31;
             // 
-            // Pedidos
+            // FrmPedidos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 306);
-            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.ClienteId);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.button8);
-            this.Controls.Add(this.button7);
-            this.Controls.Add(this.listBox1);
+            this.Controls.Add(this.BtnExcluirProduto);
+            this.Controls.Add(this.BtnAdicionarProduto);
+            this.Controls.Add(this.ListaProdutos);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.textBox1);
-            this.Name = "Pedidos";
+            this.Controls.Add(this.IdPedido);
+            this.Name = "FrmPedidos";
             this.Text = "Pedidos";
+            this.Load += new System.EventHandler(this.FrmPedidos_Load);
             this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -211,20 +201,19 @@
 
         #endregion
 
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox IdPedido;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Button button6;
-        private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.ListBox listBox1;
-        private System.Windows.Forms.Button button7;
-        private System.Windows.Forms.Button button8;
+        private System.Windows.Forms.Button BtnExcluir;
+        private System.Windows.Forms.Button BtnFechar;
+        private System.Windows.Forms.Button BtnLocalizar;
+        private System.Windows.Forms.Button BtnSalvar;
+        private System.Windows.Forms.Button BtnCancelar;
+        private System.Windows.Forms.ListBox ListaProdutos;
+        private System.Windows.Forms.Button BtnAdicionarProduto;
+        private System.Windows.Forms.Button BtnExcluirProduto;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox ClienteId;
     }
 }

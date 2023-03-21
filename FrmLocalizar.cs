@@ -14,6 +14,7 @@ namespace ProjetoCafeteria
     public partial class FrmLocalizar : Form
     {
         private DataRowCollection ItemSelecionado;
+        private ICollection<DataRow> listadeitens { get; set; }
         /// <summary>
         /// assim que a tela e instanciada e pedido a coluna do id ,coluna nome e o nome da tabela
         /// </summary>
@@ -41,6 +42,11 @@ namespace ProjetoCafeteria
             // esta criando o comando sql  
             var sql = $@"Select {nomes} From {tabela}";
             // Esta executando o comando sql e salvando as linhas dentro da propriedade item selecionado
+            ItemSelecionado = BD.RetornaDatatable(sql).Rows;
+            InitializeComponent();
+        }
+        public FrmLocalizar(string sql)
+        {
             ItemSelecionado = BD.RetornaDatatable(sql).Rows;
             InitializeComponent();
         }
