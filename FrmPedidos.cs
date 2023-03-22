@@ -85,21 +85,22 @@ namespace ProjetoCafeteria
                 //comando sql inserindo o pedido
                 var sql = $@"INSERT INTO Pedidos (ClienteId,FuncionarioId)
                 VALUES ({cliente},1);";
-                // se o tamanho for maior que 0 
-                //if (codigo.Length > 0)
-                //{
-                //    //esta selecionando cada campo e transforma o campo em atualização
-                //    //depois separa cada campo por virgula
-                //    var atualizar = listaDeCampos.Select(x => $"[{x.Name}]='{x.Text}'")
-                //        .Aggregate((a, b) => $"{a},{b}");
-                //    //criando comando de sql de atualização
-                //    sql = $@"UPDATE Funcionarios
-                //        SET {atualizar},CargoId={ItemSelecionado[CargoId.SelectedIndex][0]}
-                //        WHERE IdFuncionario={codigo}";
-                //}
+                // se o tamanho for maior que 0 vai atualizar o pedido
+                if (codigo.Length > 0)
+                {
+                    // apaga o comando sql de inserir para evitar criar um novo item
+                    sql = "";
+                    //comando sql para deletar todos os produtos no pedido atual
+                    var sqlatualizar = $@"delete from PedidosProdutos where PedidoId = {codigo}";
+                    //executar comando sql atualizar
+                    BD.RetornaDatatable(sqlatualizar);
+                }
 
-                //rodando o comando no banco de dados e pegando id do pedido
-                var IdPedido=BD.ExecutaComando(sql,true);
+                //pegando o codigo por padrão 
+                var IdPedido = int.Parse(codigo);
+                //caso for um pedido novo é criado o pedido e retornado o id 
+                if (sql.Length > 0)
+                    IdPedido=BD.ExecutaComando(sql,true);
                 // transformando todos os produto selecionados para ser inserido no sql
                 var produtos = ProdutosSelecionados.Select(x => $"({IdPedido},'{x[0]}')")
                     .Aggregate((a, b) => $"{a},{b}");
@@ -119,29 +120,42 @@ namespace ProjetoCafeteria
 
         private void BtnLocalizar_Click(object sender, EventArgs e)
         {
-            // abrindo a tela de localização de categorias
-            var form = new FrmLocalizar($@"select p.IdPedido,c.Nome,c.IdCliente,pr.IdProduto from pedidos P
+            // abrindo a tela de localização de Pedidos
+            var form = new FrmLocalizar($@"select p.IdPedido,c.Nome,c.IdCliente from pedidos P
                 inner join clientes c
-                on p.ClienteId = c.IdCliente
-
-                inner join PedidosProdutos pp
-                on pp.PedidoId=p.IdPedido
-                inner join Produtos pr
-                on pr.IdProduto = pp.ProdutoId;");
+                on p.ClienteId = c.IdCliente");
             form.ShowDialog();
             // tratando os erros 
             try
             {
                 // pegando o item selecionado 
                 var Pedido = form.PegarItemSelecionado();
-                // atribuindo o primeiro item do categoria ao campo de codigo
+                // atribuindo o primeiro item do pedido ao campo de codigo
                 IdPedido.Text = Pedido[0].ToString();
-                // atribuindo o segundo item do categoria ao campo de categoria
+                // atribuindo o cliente  ao campo de cliente 
                 for (var i = 0; i < Clientes.Count; i++)
                     if (Clientes[i][0].ToString() == Pedido[2].ToString())
                     {
                         ClienteId.SelectedIndex = i; break;
                     }
+                // comando sql para selecionar todos os produtos do pedido
+                var sqlprodutos = $@"select pr.IdProduto,pr.NomeDoProduto from pedidos p
+                    inner join PedidosProdutos pp
+                    on pp.PedidoId= p.IdPedido
+                    inner join Produtos pr
+                    on pr.IdProduto  = pp.ProdutoId
+                    where p.IdPedido ={Pedido[0]}";
+                // rodando o comando sql
+                var produtos = BD.RetornaDatatable(sqlprodutos).Rows;
+                //limpando a lista 
+                ProdutosSelecionados.Clear();
+                ListaProdutos.Items.Clear();
+                //adicionando todos os produtos do pedido na lista
+                foreach ( DataRow produto in produtos)
+                {
+                    ProdutosSelecionados.Add(produto);
+                    ListaProdutos.Items.Add(produto[1].ToString());
+                }
 
                 BtnCancelar.Enabled = true;
                 BtnExcluir.Enabled = true;
@@ -150,6 +164,44 @@ namespace ProjetoCafeteria
             {
                 return;
             }
+        }
+
+        private void BtnExcluir_Click(object sender, EventArgs e)
+        {
+            // tratando erros ao excluir 
+            try
+            {
+                //limpando o campo do codigo e evitando o sql injection
+                var codigo = IdPedido.Text.Trim().Replace("'", "");
+                // verificando caso o não estiver vazio
+                if (codigo.Length > 0)
+                {
+                    //comando exclusão do pedido 
+                    var sql = $@"delete from PedidosProdutos  where PedidoId = {codigo};
+                        delete from Pedidos where IdPedido = {codigo} ;";
+                    //rodando comando sql
+                    BD.RetornaDatatable(sql);
+                    Close();
+                }
+            }
+            catch
+            {
+                // caso cair no erro ele ira mostrar a seguinte menssagem 
+                MessageBox.Show(" Não foi possivel excluir,tente novamente  ", Text, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+
+            }
+        }
+
+        private void BtnFechar_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
+
+        private void BtnCancelar_Click(object sender, EventArgs e)
+        {
+            // resetando os botao cancelar e excluir
+            BtnCancelar.Enabled = false;    
+            BtnExcluir.Enabled = false;
         }
     }
 }

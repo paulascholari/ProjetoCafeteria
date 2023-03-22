@@ -13,7 +13,7 @@ namespace ProjetoCafeteria
 {
     public partial class FrmLocalizar : Form
     {
-        private DataRowCollection ItemSelecionado;
+        private DataTable ItemSelecionado;
         private ICollection<DataRow> listadeitens { get; set; }
         /// <summary>
         /// assim que a tela e instanciada e pedido a coluna do id ,coluna nome e o nome da tabela
@@ -26,7 +26,7 @@ namespace ProjetoCafeteria
             // esta criando o comando sql  
             var sql = $@"Select {idColuna} ,{nomeColuna}  From {tabela}";
             // Esta executando o comando sql e salvando as linhas dentro da propriedade item selecionado
-            ItemSelecionado = BD.RetornaDatatable(sql).Rows;
+            ItemSelecionado = BD.RetornaDatatable(sql);
             InitializeComponent();
         }
         /// <summary>
@@ -42,12 +42,12 @@ namespace ProjetoCafeteria
             // esta criando o comando sql  
             var sql = $@"Select {nomes} From {tabela}";
             // Esta executando o comando sql e salvando as linhas dentro da propriedade item selecionado
-            ItemSelecionado = BD.RetornaDatatable(sql).Rows;
+            ItemSelecionado = BD.RetornaDatatable(sql);
             InitializeComponent();
         }
         public FrmLocalizar(string sql)
         {
-            ItemSelecionado = BD.RetornaDatatable(sql).Rows;
+            ItemSelecionado = BD.RetornaDatatable(sql);
             InitializeComponent();
         }
         /// <summary>
@@ -60,7 +60,7 @@ namespace ProjetoCafeteria
             // tratando erro 
             try
             {
-                return ItemSelecionado[Lista.SelectedIndex];
+                return ItemSelecionado.Rows[ListaDeLocalizar.SelectedRows[0].Index];
             }
             catch
             {
@@ -71,15 +71,15 @@ namespace ProjetoCafeteria
 
         private void FrmLocalizar_Load(object sender, EventArgs e)
         {
-            // percorrendo as categorias 
-            foreach (DataRow row in ItemSelecionado)
-            {
-                // adicionando na lista de seleção 
-                Lista.Items.Add(row[1].ToString());
-            }
+            ListaDeLocalizar.DataSource = ItemSelecionado;
         }
 
         private void Lista_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            Close();
+        }
+
+        private void ListaDeLocalizar_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             Close();
         }

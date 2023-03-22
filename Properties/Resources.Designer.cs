@@ -73,6 +73,16 @@ namespace ProjetoCafeteria.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Icontexto_Search_Search_black_256 {
+            get {
+                object obj = ResourceManager.GetObject("Icontexto-Search-Search-black.256", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Trabalho_anderson {
             get {
                 object obj = ResourceManager.GetObject("Trabalho anderson", resourceCulture);

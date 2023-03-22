@@ -47,6 +47,7 @@
             // 
             // IdPedido
             // 
+            this.IdPedido.Enabled = false;
             this.IdPedido.Location = new System.Drawing.Point(17, 25);
             this.IdPedido.Name = "IdPedido";
             this.IdPedido.Size = new System.Drawing.Size(50, 20);
@@ -86,12 +87,14 @@
             // 
             // BtnExcluir
             // 
+            this.BtnExcluir.Enabled = false;
             this.BtnExcluir.Location = new System.Drawing.Point(178, 16);
             this.BtnExcluir.Name = "BtnExcluir";
             this.BtnExcluir.Size = new System.Drawing.Size(75, 23);
             this.BtnExcluir.TabIndex = 30;
             this.BtnExcluir.Text = "Excluir";
             this.BtnExcluir.UseVisualStyleBackColor = true;
+            this.BtnExcluir.Click += new System.EventHandler(this.BtnExcluir_Click);
             // 
             // BtnFechar
             // 
@@ -101,6 +104,7 @@
             this.BtnFechar.TabIndex = 29;
             this.BtnFechar.Text = "Fechar";
             this.BtnFechar.UseVisualStyleBackColor = true;
+            this.BtnFechar.Click += new System.EventHandler(this.BtnFechar_Click);
             // 
             // BtnLocalizar
             // 
@@ -124,12 +128,14 @@
             // 
             // BtnCancelar
             // 
+            this.BtnCancelar.Enabled = false;
             this.BtnCancelar.Location = new System.Drawing.Point(97, 16);
             this.BtnCancelar.Name = "BtnCancelar";
             this.BtnCancelar.Size = new System.Drawing.Size(75, 23);
             this.BtnCancelar.TabIndex = 26;
             this.BtnCancelar.Text = "Cancelar";
             this.BtnCancelar.UseVisualStyleBackColor = true;
+            this.BtnCancelar.Click += new System.EventHandler(this.BtnCancelar_Click);
             // 
             // ListaProdutos
             // 
