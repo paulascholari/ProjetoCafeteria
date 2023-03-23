@@ -84,7 +84,7 @@ namespace ProjetoCafeteria
             {
                 //comando sql inserindo o pedido
                 var sql = $@"INSERT INTO Pedidos (ClienteId,FuncionarioId)
-                VALUES ({cliente},1);";
+                VALUES ({cliente},{Login.PegarFuncinarioId()});";
                 // se o tamanho for maior que 0 vai atualizar o pedido
                 if (codigo.Length > 0)
                 {

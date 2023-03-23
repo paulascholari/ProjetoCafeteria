@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ProjetoCafeteria.Classes;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -40,6 +41,27 @@ namespace ProjetoCafeteria
 
             AbrirTela(new frmJanelaSplash());
             AbrirTela(new frmLogin());
+            try
+            {
+                var codigo = Login.PegarFuncinarioId();
+                if (codigo == -1) Application.Exit();
+                var sql = $@"select c.IdCargo from Funcionarios f
+                            inner join Cargos c
+                            on c.IdCargo = f.CargoId
+                            where f.IdFuncionario = {codigo}";
+                var funcinario = BD.RetornaDatatable(sql).Rows;
+                if (funcinario[0][0].ToString() == "1")
+                {
+                    MenuFuncionarios.Enabled = true;
+                    MenuCargos.Enabled = true;
+                    MenuRelatorioFuncionarios.Enabled = true;
+                    MenuRelatorioCargos.Enabled = true;
+                }
+            }
+            catch
+            {
+                Application.Exit();
+            }
         }
 
         private void categoriasToolStripMenuItem_Click(object sender, EventArgs e)

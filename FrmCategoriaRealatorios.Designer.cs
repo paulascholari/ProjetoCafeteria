@@ -50,19 +50,20 @@
             this.listView1.TabIndex = 1;
             this.listView1.UseCompatibleStateImageBehavior = false;
             this.listView1.View = System.Windows.Forms.View.Details;
+            this.listView1.SelectedIndexChanged += new System.EventHandler(this.listView1_SelectedIndexChanged);
             // 
             // columnHeader1
             // 
             this.columnHeader1.Text = "Nome Da Categoria";
             this.columnHeader1.Width = 674;
             // 
-            // CategoriaRealatorios
+            // FrmCategoriaRealatorios
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.listView1);
-            this.Name = "CategoriaRealatorios";
+            this.Name = "FrmCategoriaRealatorios";
             this.Text = "CategoriaRealatorios";
             this.ResumeLayout(false);
 

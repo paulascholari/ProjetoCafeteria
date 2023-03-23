@@ -25,7 +25,14 @@ namespace ProjetoCafeteria
                 SELECT * FROM Funcionarios
                 WHERE Email='{usuario}' AND Password='{senha}'
             "; 
+            
             var dt = BD.RetornaDatatable(sql); 
+            // verificando se existe o usuario 
+            if(dt.Rows.Count != 0)
+            {
+                //salvando id do funcionario
+                Login.SalvarFuncionarioId(int.Parse(dt.Rows[0][0].ToString()));
+            }
             return dt.Rows.Count != 0;
         }
 
@@ -60,9 +67,6 @@ namespace ProjetoCafeteria
                 return;
             }
             Close();
-            {
-
-            }
         }
 
         private void Formclose(object sender, FormClosedEventArgs e)
