@@ -14,7 +14,6 @@ namespace ProjetoCafeteria
     public partial class FrmLocalizar : Form
     {
         private DataTable ItemSelecionado;
-        private ICollection<DataRow> listadeitens { get; set; }
         /// <summary>
         /// assim que a tela e instanciada e pedido a coluna do id ,coluna nome e o nome da tabela
         /// </summary>
@@ -73,15 +72,14 @@ namespace ProjetoCafeteria
         {
             ListaDeLocalizar.DataSource = ItemSelecionado;
         }
-
-        private void Lista_SelectedIndexChanged(object sender, EventArgs e)
+        private void ListaDeLocalizar_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             Close();
         }
 
-        private void ListaDeLocalizar_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        private void button1_Click(object sender, EventArgs e)
         {
-            Close();
+
         }
     }
 }
