@@ -44,7 +44,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(12, 57);
+            this.label2.Location = new System.Drawing.Point(9, 57);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(104, 13);
             this.label2.TabIndex = 13;
@@ -84,15 +84,15 @@
             this.panel1.Controls.Add(this.BtnSalvar);
             this.panel1.Controls.Add(this.BtnCancelar);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel1.Location = new System.Drawing.Point(0, 107);
+            this.panel1.Location = new System.Drawing.Point(0, 99);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(800, 53);
+            this.panel1.Size = new System.Drawing.Size(427, 33);
             this.panel1.TabIndex = 25;
             // 
             // BtnExcluir
             // 
             this.BtnExcluir.Enabled = false;
-            this.BtnExcluir.Location = new System.Drawing.Point(172, 16);
+            this.BtnExcluir.Location = new System.Drawing.Point(172, 3);
             this.BtnExcluir.Name = "BtnExcluir";
             this.BtnExcluir.Size = new System.Drawing.Size(75, 23);
             this.BtnExcluir.TabIndex = 30;
@@ -102,7 +102,7 @@
             // 
             // BtnFechar
             // 
-            this.BtnFechar.Location = new System.Drawing.Point(351, 16);
+            this.BtnFechar.Location = new System.Drawing.Point(343, 3);
             this.BtnFechar.Name = "BtnFechar";
             this.BtnFechar.Size = new System.Drawing.Size(75, 23);
             this.BtnFechar.TabIndex = 29;
@@ -112,7 +112,7 @@
             // 
             // BtnLocalizar
             // 
-            this.BtnLocalizar.Location = new System.Drawing.Point(253, 16);
+            this.BtnLocalizar.Location = new System.Drawing.Point(253, 3);
             this.BtnLocalizar.Name = "BtnLocalizar";
             this.BtnLocalizar.Size = new System.Drawing.Size(75, 23);
             this.BtnLocalizar.TabIndex = 28;
@@ -122,7 +122,7 @@
             // 
             // BtnSalvar
             // 
-            this.BtnSalvar.Location = new System.Drawing.Point(10, 16);
+            this.BtnSalvar.Location = new System.Drawing.Point(10, 3);
             this.BtnSalvar.Name = "BtnSalvar";
             this.BtnSalvar.Size = new System.Drawing.Size(75, 23);
             this.BtnSalvar.TabIndex = 27;
@@ -133,7 +133,7 @@
             // BtnCancelar
             // 
             this.BtnCancelar.Enabled = false;
-            this.BtnCancelar.Location = new System.Drawing.Point(91, 16);
+            this.BtnCancelar.Location = new System.Drawing.Point(91, 3);
             this.BtnCancelar.Name = "BtnCancelar";
             this.BtnCancelar.Size = new System.Drawing.Size(75, 23);
             this.BtnCancelar.TabIndex = 26;
@@ -145,7 +145,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 160);
+            this.ClientSize = new System.Drawing.Size(427, 132);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);

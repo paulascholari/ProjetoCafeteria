@@ -46,7 +46,7 @@
             this.ListaDeLocalizar.ReadOnly = true;
             this.ListaDeLocalizar.RowHeadersVisible = false;
             this.ListaDeLocalizar.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.ListaDeLocalizar.Size = new System.Drawing.Size(702, 320);
+            this.ListaDeLocalizar.Size = new System.Drawing.Size(702, 310);
             this.ListaDeLocalizar.TabIndex = 3;
             this.ListaDeLocalizar.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.ListaDeLocalizar_CellContentClick);
             // 
@@ -81,7 +81,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(702, 414);
+            this.ClientSize = new System.Drawing.Size(702, 402);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.Pesquisa);

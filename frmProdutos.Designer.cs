@@ -54,7 +54,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(12, 9);
+            this.label1.Location = new System.Drawing.Point(9, 9);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(49, 13);
             this.label1.TabIndex = 10;
@@ -72,7 +72,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(12, 87);
+            this.label3.Location = new System.Drawing.Point(9, 87);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(69, 13);
             this.label3.TabIndex = 34;
@@ -88,16 +88,16 @@
             this.panel1.Controls.Add(this.BtnSalvar);
             this.panel1.Controls.Add(this.BtnCancelar);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel1.Location = new System.Drawing.Point(0, 204);
+            this.panel1.Location = new System.Drawing.Point(0, 193);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(800, 53);
+            this.panel1.Size = new System.Drawing.Size(435, 33);
             this.panel1.TabIndex = 35;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
             // BtnExcluir
             // 
             this.BtnExcluir.Enabled = false;
-            this.BtnExcluir.Location = new System.Drawing.Point(172, 16);
+            this.BtnExcluir.Location = new System.Drawing.Point(172, 3);
             this.BtnExcluir.Name = "BtnExcluir";
             this.BtnExcluir.Size = new System.Drawing.Size(75, 23);
             this.BtnExcluir.TabIndex = 30;
@@ -107,7 +107,7 @@
             // 
             // BtnFechar
             // 
-            this.BtnFechar.Location = new System.Drawing.Point(351, 16);
+            this.BtnFechar.Location = new System.Drawing.Point(351, 3);
             this.BtnFechar.Name = "BtnFechar";
             this.BtnFechar.Size = new System.Drawing.Size(75, 23);
             this.BtnFechar.TabIndex = 29;
@@ -117,7 +117,7 @@
             // 
             // BtnLocalizar
             // 
-            this.BtnLocalizar.Location = new System.Drawing.Point(253, 16);
+            this.BtnLocalizar.Location = new System.Drawing.Point(253, 3);
             this.BtnLocalizar.Name = "BtnLocalizar";
             this.BtnLocalizar.Size = new System.Drawing.Size(75, 23);
             this.BtnLocalizar.TabIndex = 28;
@@ -127,7 +127,7 @@
             // 
             // BtnSalvar
             // 
-            this.BtnSalvar.Location = new System.Drawing.Point(10, 16);
+            this.BtnSalvar.Location = new System.Drawing.Point(10, 3);
             this.BtnSalvar.Name = "BtnSalvar";
             this.BtnSalvar.Size = new System.Drawing.Size(75, 23);
             this.BtnSalvar.TabIndex = 27;
@@ -138,7 +138,7 @@
             // BtnCancelar
             // 
             this.BtnCancelar.Enabled = false;
-            this.BtnCancelar.Location = new System.Drawing.Point(91, 16);
+            this.BtnCancelar.Location = new System.Drawing.Point(91, 3);
             this.BtnCancelar.Name = "BtnCancelar";
             this.BtnCancelar.Size = new System.Drawing.Size(75, 23);
             this.BtnCancelar.TabIndex = 26;
@@ -149,7 +149,7 @@
             // label18
             // 
             this.label18.AutoSize = true;
-            this.label18.Location = new System.Drawing.Point(12, 126);
+            this.label18.Location = new System.Drawing.Point(9, 127);
             this.label18.Name = "label18";
             this.label18.Size = new System.Drawing.Size(80, 13);
             this.label18.TabIndex = 64;
@@ -157,10 +157,10 @@
             // 
             // Observação
             // 
-            this.Observação.Location = new System.Drawing.Point(12, 142);
+            this.Observação.Location = new System.Drawing.Point(12, 143);
             this.Observação.Multiline = true;
             this.Observação.Name = "Observação";
-            this.Observação.Size = new System.Drawing.Size(454, 41);
+            this.Observação.Size = new System.Drawing.Size(383, 41);
             this.Observação.TabIndex = 63;
             // 
             // Preco
@@ -219,7 +219,7 @@
             // CategoriaId
             // 
             this.CategoriaId.FormattingEnabled = true;
-            this.CategoriaId.Location = new System.Drawing.Point(12, 102);
+            this.CategoriaId.Location = new System.Drawing.Point(12, 103);
             this.CategoriaId.Name = "CategoriaId";
             this.CategoriaId.Size = new System.Drawing.Size(156, 21);
             this.CategoriaId.TabIndex = 73;
@@ -229,7 +229,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 257);
+            this.ClientSize = new System.Drawing.Size(435, 226);
             this.Controls.Add(this.CategoriaId);
             this.Controls.Add(this.Unidade);
             this.Controls.Add(this.label5);

@@ -48,7 +48,7 @@
             // IdPedido
             // 
             this.IdPedido.Enabled = false;
-            this.IdPedido.Location = new System.Drawing.Point(17, 25);
+            this.IdPedido.Location = new System.Drawing.Point(12, 25);
             this.IdPedido.Name = "IdPedido";
             this.IdPedido.Size = new System.Drawing.Size(50, 20);
             this.IdPedido.TabIndex = 11;
@@ -56,7 +56,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(13, 9);
+            this.label1.Location = new System.Drawing.Point(9, 9);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(49, 13);
             this.label1.TabIndex = 12;
@@ -65,7 +65,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(15, 48);
+            this.label2.Location = new System.Drawing.Point(9, 48);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(52, 13);
             this.label2.TabIndex = 14;
@@ -80,15 +80,15 @@
             this.panel1.Controls.Add(this.BtnSalvar);
             this.panel1.Controls.Add(this.BtnCancelar);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel1.Location = new System.Drawing.Point(0, 253);
+            this.panel1.Location = new System.Drawing.Point(0, 232);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(800, 53);
+            this.panel1.Size = new System.Drawing.Size(442, 34);
             this.panel1.TabIndex = 26;
             // 
             // BtnExcluir
             // 
             this.BtnExcluir.Enabled = false;
-            this.BtnExcluir.Location = new System.Drawing.Point(178, 16);
+            this.BtnExcluir.Location = new System.Drawing.Point(172, 3);
             this.BtnExcluir.Name = "BtnExcluir";
             this.BtnExcluir.Size = new System.Drawing.Size(75, 23);
             this.BtnExcluir.TabIndex = 30;
@@ -98,7 +98,7 @@
             // 
             // BtnFechar
             // 
-            this.BtnFechar.Location = new System.Drawing.Point(357, 16);
+            this.BtnFechar.Location = new System.Drawing.Point(360, 3);
             this.BtnFechar.Name = "BtnFechar";
             this.BtnFechar.Size = new System.Drawing.Size(75, 23);
             this.BtnFechar.TabIndex = 29;
@@ -108,7 +108,7 @@
             // 
             // BtnLocalizar
             // 
-            this.BtnLocalizar.Location = new System.Drawing.Point(259, 16);
+            this.BtnLocalizar.Location = new System.Drawing.Point(253, 3);
             this.BtnLocalizar.Name = "BtnLocalizar";
             this.BtnLocalizar.Size = new System.Drawing.Size(75, 23);
             this.BtnLocalizar.TabIndex = 28;
@@ -118,7 +118,7 @@
             // 
             // BtnSalvar
             // 
-            this.BtnSalvar.Location = new System.Drawing.Point(16, 16);
+            this.BtnSalvar.Location = new System.Drawing.Point(10, 3);
             this.BtnSalvar.Name = "BtnSalvar";
             this.BtnSalvar.Size = new System.Drawing.Size(75, 23);
             this.BtnSalvar.TabIndex = 27;
@@ -129,7 +129,7 @@
             // BtnCancelar
             // 
             this.BtnCancelar.Enabled = false;
-            this.BtnCancelar.Location = new System.Drawing.Point(97, 16);
+            this.BtnCancelar.Location = new System.Drawing.Point(91, 3);
             this.BtnCancelar.Name = "BtnCancelar";
             this.BtnCancelar.Size = new System.Drawing.Size(75, 23);
             this.BtnCancelar.TabIndex = 26;
@@ -140,14 +140,14 @@
             // ListaProdutos
             // 
             this.ListaProdutos.FormattingEnabled = true;
-            this.ListaProdutos.Location = new System.Drawing.Point(18, 104);
+            this.ListaProdutos.Location = new System.Drawing.Point(12, 104);
             this.ListaProdutos.Name = "ListaProdutos";
             this.ListaProdutos.Size = new System.Drawing.Size(205, 95);
             this.ListaProdutos.TabIndex = 27;
             // 
             // BtnAdicionarProduto
             // 
-            this.BtnAdicionarProduto.Location = new System.Drawing.Point(27, 205);
+            this.BtnAdicionarProduto.Location = new System.Drawing.Point(12, 205);
             this.BtnAdicionarProduto.Name = "BtnAdicionarProduto";
             this.BtnAdicionarProduto.Size = new System.Drawing.Size(75, 23);
             this.BtnAdicionarProduto.TabIndex = 28;
@@ -157,7 +157,7 @@
             // 
             // BtnExcluirProduto
             // 
-            this.BtnExcluirProduto.Location = new System.Drawing.Point(123, 205);
+            this.BtnExcluirProduto.Location = new System.Drawing.Point(99, 205);
             this.BtnExcluirProduto.Name = "BtnExcluirProduto";
             this.BtnExcluirProduto.Size = new System.Drawing.Size(75, 23);
             this.BtnExcluirProduto.TabIndex = 29;
@@ -168,7 +168,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(15, 88);
+            this.label3.Location = new System.Drawing.Point(9, 88);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(68, 13);
             this.label3.TabIndex = 30;
@@ -177,7 +177,7 @@
             // ClienteId
             // 
             this.ClienteId.FormattingEnabled = true;
-            this.ClienteId.Location = new System.Drawing.Point(18, 64);
+            this.ClienteId.Location = new System.Drawing.Point(12, 64);
             this.ClienteId.Name = "ClienteId";
             this.ClienteId.Size = new System.Drawing.Size(205, 21);
             this.ClienteId.TabIndex = 31;
@@ -186,7 +186,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 306);
+            this.ClientSize = new System.Drawing.Size(442, 266);
             this.Controls.Add(this.ClienteId);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.BtnExcluirProduto);

@@ -38,19 +38,21 @@
             // 
             // progressBar1
             // 
-            this.progressBar1.Location = new System.Drawing.Point(208, 428);
+            this.progressBar1.Location = new System.Drawing.Point(12, 428);
             this.progressBar1.Name = "progressBar1";
-            this.progressBar1.Size = new System.Drawing.Size(437, 23);
+            this.progressBar1.Size = new System.Drawing.Size(673, 23);
             this.progressBar1.TabIndex = 0;
+            this.progressBar1.Click += new System.EventHandler(this.progressBar1_Click);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(205, 412);
+            this.label1.Location = new System.Drawing.Point(9, 412);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(62, 13);
+            this.label1.Size = new System.Drawing.Size(71, 13);
             this.label1.TabIndex = 2;
-            this.label1.Text = "Carregando";
+            this.label1.Text = "Carregando...";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // timer1
             // 
@@ -64,17 +66,18 @@
             this.pictureBox1.Image = global::ProjetoCafeteria.Properties.Resources.Trabalho_anderson;
             this.pictureBox1.Location = new System.Drawing.Point(0, 0);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(800, 499);
+            this.pictureBox1.Size = new System.Drawing.Size(697, 499);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 1;
             this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // frmJanelaSplash
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(800, 499);
+            this.ClientSize = new System.Drawing.Size(697, 499);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.progressBar1);
             this.Controls.Add(this.pictureBox1);
