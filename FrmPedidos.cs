@@ -58,7 +58,6 @@ namespace ProjetoCafeteria
 
         private void FrmPedidos_Load(object sender, EventArgs e)
         {
-
             // esta criando o comando sql  
             var sql = $@"Select IdCliente , Nome  From Clientes";
             // Esta executando o comando sql e salvando as linhas dentro da propriedade item selecionado
@@ -70,18 +69,22 @@ namespace ProjetoCafeteria
                 ClienteId.Items.Add(row[1].ToString());
 
             }
+            // criando comando sql para selecionar o nome do funcionario
+            sql = $"select NomeDoFuncionario from funcionarios where IdFuncionario = {Login.PegarFuncinarioId()}";
+            var funcionario = BD.RetornaDatatable(sql).Rows ;
+            Funcionario.Text= funcionario[0][0].ToString() ;
         }
 
         private void BtnSalvar_Click(object sender, EventArgs e)
         {
-            // limpando o codigo e evitando o sql injection
-            var codigo = IdPedido.Text.Trim().Replace("'", "");
-            //selecionando o cliente 
-            var cliente = Clientes[ClienteId.SelectedIndex][0];
-
             // tratando o erro relacionado aos campos enviados para o banco de dados
             try
             {
+                // limpando o codigo e evitando o sql injection
+                var codigo = IdPedido.Text.Trim().Replace("'", "");
+                //selecionando o cliente 
+                var cliente = Clientes[ClienteId.SelectedIndex][0];
+
                 //comando sql inserindo o pedido
                 var sql = $@"INSERT INTO Pedidos (ClienteId,FuncionarioId)
                 VALUES ({cliente},{Login.PegarFuncinarioId()});";
@@ -97,12 +100,12 @@ namespace ProjetoCafeteria
                 }
 
                 //pegando o codigo por padrão 
-                var IdPedido = int.Parse(codigo);
+                var pedidoid = int.Parse(codigo);
                 //caso for um pedido novo é criado o pedido e retornado o id 
                 if (sql.Length > 0)
-                    IdPedido=BD.ExecutaComando(sql,true);
+                    pedidoid=BD.ExecutaComando(sql,true);
                 // transformando todos os produto selecionados para ser inserido no sql
-                var produtos = ProdutosSelecionados.Select(x => $"({IdPedido},'{x[0]}')")
+                var produtos = ProdutosSelecionados.Select(x => $"({pedidoid},'{x[0]}')")
                     .Aggregate((a, b) => $"{a},{b}");
                 //inserindo os produtos no pedido
                 var sqlprodutos = $@"INSERT INTO PedidosProdutos (PedidoId,ProdutoId)
@@ -202,6 +205,11 @@ namespace ProjetoCafeteria
             // resetando os botao cancelar e excluir
             BtnCancelar.Enabled = false;    
             BtnExcluir.Enabled = false;
+        }
+
+        private void Funcionario_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

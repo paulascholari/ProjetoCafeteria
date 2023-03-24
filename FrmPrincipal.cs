@@ -43,13 +43,18 @@ namespace ProjetoCafeteria
             AbrirTela(new frmLogin());
             try
             {
+                // salvando codigo funcionario em uma variavel 
                 var codigo = Login.PegarFuncinarioId();
+                //verificando se tem usuario logado , caso não estiver fecha a aplicação
                 if (codigo == -1) Application.Exit();
+                //criando comando sql para verificar o cargo do funcionario
                 var sql = $@"select c.IdCargo from Funcionarios f
                             inner join Cargos c
                             on c.IdCargo = f.CargoId
                             where f.IdFuncionario = {codigo}";
+                //rodando comando sql 
                 var funcinario = BD.RetornaDatatable(sql).Rows;
+                //verificando se caso o cargo funcionario é administrativo  e habilita as opções administrativas
                 if (funcinario[0][0].ToString() == "1")
                 {
                     MenuFuncionarios.Enabled = true;
@@ -58,6 +63,7 @@ namespace ProjetoCafeteria
                     MenuRelatorioCargos.Enabled = true;
                 }
             }
+             // caso der erro no login a aplicação e fechada
             catch
             {
                 Application.Exit();

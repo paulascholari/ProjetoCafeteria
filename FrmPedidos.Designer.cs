@@ -42,6 +42,8 @@
             this.BtnExcluirProduto = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.ClienteId = new System.Windows.Forms.ComboBox();
+            this.Funcionario = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -182,11 +184,31 @@
             this.ClienteId.Size = new System.Drawing.Size(205, 21);
             this.ClienteId.TabIndex = 31;
             // 
+            // Funcionario
+            // 
+            this.Funcionario.Enabled = false;
+            this.Funcionario.Location = new System.Drawing.Point(68, 25);
+            this.Funcionario.Name = "Funcionario";
+            this.Funcionario.Size = new System.Drawing.Size(100, 20);
+            this.Funcionario.TabIndex = 32;
+            this.Funcionario.TextChanged += new System.EventHandler(this.Funcionario_TextChanged);
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(65, 9);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(81, 13);
+            this.label4.TabIndex = 33;
+            this.label4.Text = "FUNCIONARIO";
+            // 
             // FrmPedidos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(442, 266);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.Funcionario);
             this.Controls.Add(this.ClienteId);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.BtnExcluirProduto);
@@ -221,5 +243,7 @@
         private System.Windows.Forms.Button BtnExcluirProduto;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.ComboBox ClienteId;
+        private System.Windows.Forms.TextBox Funcionario;
+        private System.Windows.Forms.Label label4;
     }
 }
