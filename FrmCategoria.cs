@@ -63,6 +63,10 @@ namespace ProjetoCafeteria
         {
             // abrindo a tela de localização de categorias
             var form = new FrmLocalizar("IdCategoria", "NomeDaCategoria", "Categorias");
+
+            // atribuindo comando de  pesquisa e o @Pesquisa dentro do comando  vai ser substituido pela pesquisa 
+            form.sqlpesquisa($@"select IdCategoria,NomeDaCategoria from Categorias
+                        where NomeDaCategoria like '%@pesquisa%'");
             form.ShowDialog();
             // tratando os erros 
             try

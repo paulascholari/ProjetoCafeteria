@@ -67,6 +67,11 @@ namespace ProjetoCafeteria
                 throw new Exception();
             }
         }
+        private string sql = "";
+        public void sqlpesquisa(string sql)
+        {
+            this.sql = sql;
+        }
 
         private void FrmLocalizar_Load(object sender, EventArgs e)
         {
@@ -79,7 +84,9 @@ namespace ProjetoCafeteria
 
         private void button1_Click(object sender, EventArgs e)
         {
-
+            var pesquisa = Pesquisa.Text.Trim().Replace("'", "");
+            ItemSelecionado = BD.RetornaDatatable(sql.Replace("@pesquisa",pesquisa));
+            ListaDeLocalizar.DataSource = ItemSelecionado;
         }
     }
 }

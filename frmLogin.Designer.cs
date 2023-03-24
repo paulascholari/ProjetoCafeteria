@@ -48,6 +48,7 @@
             this.txtSenha.Size = new System.Drawing.Size(130, 20);
             this.txtSenha.TabIndex = 2;
             this.txtSenha.Text = "teste";
+            this.txtSenha.UseSystemPasswordChar = true;
             this.txtSenha.TextChanged += new System.EventHandler(this.txtSenha_TextChanged);
             // 
             // txtUsuario

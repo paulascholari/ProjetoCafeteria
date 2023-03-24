@@ -27,6 +27,10 @@ namespace ProjetoCafeteria
 
             // abrindo a tela de localização de cargos
             var form = new FrmLocalizar("IdCargo", "NomeDoCargo", "Cargos");
+
+            // atribuindo comando de  pesquisa e o @Pesquisa dentro do comando  vai ser substituido pela pesquisa 
+            form.sqlpesquisa($@"select IdCargo,NomeDoCargo from Cargos 
+                        where NomeDoCargo like '%@pesquisa%' ");
             form.ShowDialog();
             // tratando os erros 
             try

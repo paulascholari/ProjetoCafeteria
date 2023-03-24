@@ -128,6 +128,30 @@ namespace ProjetoCafeteria
             var Nomes = listaDeCampos.Select(x => $"[{x.Name}]").ToList();
             // abrindo a tela de localização de funcionarios
             var form = new FrmLocalizar( Nomes, "Funcionarios");
+
+
+            // atribuindo comando de  pesquisa e o @Pesquisa dentro do comando  vai ser substituido pela pesquisa 
+            form.sqlpesquisa($@"select IdFuncionario,
+                            NomeDoFuncionario,
+                            Logradouro,
+                            Bairro,
+                            NumeroDaCasa,
+                            UF,
+                            CEP,
+                            Municipio,
+                            Telefone,
+                            TelefoneContato,
+                            Email,
+                            EmailContato,
+                            Observação,
+                            Password,
+                            CargoId from Funcionarios 
+                        where NomeDoFuncionario like '%@pesquisa%' 
+                            or Logradouro like '%@pesquisa%'
+                            or Bairro like '%@pesquisa%'
+                            or Municipio like '%@pesquisa%'
+                            or Telefone like '%@pesquisa%'
+                            or Email like '%@pesquisa%'");
             form.ShowDialog();
             // tratando os erros 
             try

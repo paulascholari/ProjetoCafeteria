@@ -94,6 +94,10 @@ namespace ProjetoCafeteria
             var Nomes = listaDeCampos.Select(x => $"[{x.Name}]").ToList();
             // abrindo a tela de localização de Produtos
             var form = new FrmLocalizar(Nomes, "Produtos");
+
+            // atribuindo comando de  pesquisa e o @Pesquisa dentro do comando  vai ser substituido pela pesquisa 
+            form.sqlpesquisa($@"select IdProduto,NomeDoProduto,Preco,Unidade,[Observação],CategoriaId from Produtos 
+                        where NomeDoProduto like '%@pesquisa%'");
             form.ShowDialog();
             // tratando os erros 
             try

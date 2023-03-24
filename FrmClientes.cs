@@ -116,6 +116,26 @@ namespace ProjetoCafeteria
             var Nomes = listaDeCampos.Select(x => $"[{x.Name}]").ToList();
             // abrindo a tela de localização de Clientes
             var form = new FrmLocalizar(Nomes, "Clientes");
+
+            // atribuindo comando de  pesquisa e o @Pesquisa dentro do comando  vai ser substituido pela pesquisa 
+            form.sqlpesquisa($@"select IdCliente,
+                        Nome,
+                        Logradouro,
+                        Bairro,
+                        Numero,
+                        UF,
+                        CEP,
+                        Municipio,
+                        Telefone,
+                        TelefoneContato,
+                        Email,
+                        EmailContato from Clientes 
+                        where Nome like '%@pesquisa%' 
+                            or Logradouro like '%@pesquisa%'
+                            or Bairro like '%@pesquisa%'
+                            or Municipio like '%@pesquisa%'
+                            or Telefone like '%@pesquisa%'
+                            or Email like '%@pesquisa%'");
             form.ShowDialog();
             // tratando os erros 
             try

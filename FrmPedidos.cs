@@ -100,7 +100,9 @@ namespace ProjetoCafeteria
                 }
 
                 //pegando o codigo por padrão 
-                var pedidoid = int.Parse(codigo);
+                var pedidoid = -1;
+                //tentando converter caso não converter ele retorna o valor padrão
+                int.TryParse(codigo,out pedidoid);
                 //caso for um pedido novo é criado o pedido e retornado o id 
                 if (sql.Length > 0)
                     pedidoid=BD.ExecutaComando(sql,true);
@@ -127,6 +129,11 @@ namespace ProjetoCafeteria
             var form = new FrmLocalizar($@"select p.IdPedido,c.Nome,c.IdCliente from pedidos P
                 inner join clientes c
                 on p.ClienteId = c.IdCliente");
+            // atribuindo comando de  pesquisa e o @Pesquisa dentro do comando  vai ser substituido pela pesquisa 
+            form.sqlpesquisa($@"select p.IdPedido,c.Nome,c.IdCliente from Pedidos p
+                        inner join Clientes c
+                        on c.IdCliente =p.ClienteId
+                        where c.Nome like '%@pesquisa%'");
             form.ShowDialog();
             // tratando os erros 
             try
