@@ -138,5 +138,10 @@ namespace ProjetoCafeteria
         {
             Application.Exit();
         }
+
+        private void relatoriosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

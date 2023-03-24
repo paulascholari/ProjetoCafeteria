@@ -139,8 +139,9 @@
             this.MenuRelatorioFuncionarios,
             this.pedidosToolStripMenuItem});
             this.relatoriosToolStripMenuItem.Name = "relatoriosToolStripMenuItem";
-            this.relatoriosToolStripMenuItem.Size = new System.Drawing.Size(74, 20);
-            this.relatoriosToolStripMenuItem.Text = "Relatorios ";
+            this.relatoriosToolStripMenuItem.Size = new System.Drawing.Size(71, 20);
+            this.relatoriosToolStripMenuItem.Text = "Relatórios";
+            this.relatoriosToolStripMenuItem.Click += new System.EventHandler(this.relatoriosToolStripMenuItem_Click);
             // 
             // categoriasToolStripMenuItem1
             // 
