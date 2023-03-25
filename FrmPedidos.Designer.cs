@@ -44,6 +44,8 @@
             this.ClienteId = new System.Windows.Forms.ComboBox();
             this.Funcionario = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
+            this.Preco = new System.Windows.Forms.TextBox();
+            this.Total = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -202,11 +204,30 @@
             this.label4.TabIndex = 33;
             this.label4.Text = "FUNCIONARIO";
             // 
+            // Preco
+            // 
+            this.Preco.Enabled = false;
+            this.Preco.Location = new System.Drawing.Point(223, 64);
+            this.Preco.Name = "Preco";
+            this.Preco.Size = new System.Drawing.Size(63, 20);
+            this.Preco.TabIndex = 34;
+            // 
+            // Total
+            // 
+            this.Total.AutoSize = true;
+            this.Total.Location = new System.Drawing.Point(223, 45);
+            this.Total.Name = "Total";
+            this.Total.Size = new System.Drawing.Size(31, 13);
+            this.Total.TabIndex = 35;
+            this.Total.Text = "Total";
+            // 
             // FrmPedidos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(442, 266);
+            this.Controls.Add(this.Total);
+            this.Controls.Add(this.Preco);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.Funcionario);
             this.Controls.Add(this.ClienteId);
@@ -245,5 +266,7 @@
         private System.Windows.Forms.ComboBox ClienteId;
         private System.Windows.Forms.TextBox Funcionario;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.TextBox Preco;
+        private System.Windows.Forms.Label Total;
     }
 }

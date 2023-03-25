@@ -15,6 +15,7 @@ namespace ProjetoCafeteria
 {
     public partial class FrmPedidos : Form
     {
+        public double valortotal = 0;
         public ICollection<DataRow> ProdutosSelecionados = new List<DataRow>();
         public DataRowCollection Clientes { get; set; }
         public FrmPedidos()
@@ -38,7 +39,7 @@ namespace ProjetoCafeteria
         {
 
             // abrindo a tela de localização de Produtos
-            var form = new FrmLocalizar("IdProduto", "NomeDoProduto", "Produtos");
+            var form = new FrmLocalizar("select IdProduto,NomeDoProduto,Preco from Produtos");
             form.ShowDialog();
             // tratando os erros 
             try
@@ -49,6 +50,11 @@ namespace ProjetoCafeteria
                 ProdutosSelecionados.Add(produto);
                 //adicionando na lista o item que foi selecionado da tela de localizar 
                 ListaProdutos.Items.Add(produto[1].ToString());
+                // convertendo a coluna de preço para double e somando
+                double.TryParse(produto[2].ToString(), out var novovalor);
+                valortotal += novovalor;
+                // mostrando o preço na tela
+                Preco.Text=valortotal.ToString();
             }
             catch
             {
