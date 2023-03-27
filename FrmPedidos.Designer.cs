@@ -211,6 +211,7 @@
             this.Preco.Name = "Preco";
             this.Preco.Size = new System.Drawing.Size(63, 20);
             this.Preco.TabIndex = 34;
+            this.Preco.TextChanged += new System.EventHandler(this.Preco_TextChanged);
             // 
             // Total
             // 

@@ -28,6 +28,12 @@ namespace ProjetoCafeteria
             // verificando se tem algum item selecionado na lista de produtos
             if (ListaProdutos.SelectedIndex != -1)
             {
+
+                // convertendo a coluna de preço para double e subtraindo 
+                double.TryParse(ProdutosSelecionados.ElementAt(ListaProdutos.SelectedIndex)[2].ToString(), out var novovalor);
+                valortotal -= novovalor;
+                // mostrando o preço na tela
+                Preco.Text = "R$" + valortotal.ToString("N2");
                 //removendo o produto da propriedade produtos selecionados 
                 ProdutosSelecionados.Remove(ProdutosSelecionados.ElementAt(ListaProdutos.SelectedIndex));
                 //removendo produto da lista
@@ -54,7 +60,7 @@ namespace ProjetoCafeteria
                 double.TryParse(produto[2].ToString(), out var novovalor);
                 valortotal += novovalor;
                 // mostrando o preço na tela
-                Preco.Text=valortotal.ToString();
+                Preco.Text="R$"+valortotal.ToString("N2");
             }
             catch
             {
@@ -221,6 +227,11 @@ namespace ProjetoCafeteria
         }
 
         private void Funcionario_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Preco_TextChanged(object sender, EventArgs e)
         {
 
         }
