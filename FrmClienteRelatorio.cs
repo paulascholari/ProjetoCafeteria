@@ -23,7 +23,7 @@ namespace ProjetoCafeteria
         {
             //comando selecionando todos os itens
             var itens = BD.RetornaDatatable($@"select c.nome,count(p.ClienteId),c.Logradouro from Clientes c
-                        inner join Pedidos p    
+                        left join Pedidos p    
                         on p.ClienteId = c.IdCliente
                         group by p.ClienteId,c.Nome,c.Logradouro").Rows;
             //limpando a lista
