@@ -145,7 +145,7 @@
             this.Controls.Add(this.txtSenha);
             this.Controls.Add(this.pictureBox1);
             this.Name = "frmLogin";
-            this.Text = "frmLogin";
+            this.Text = "Tela De Login";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Formclose);
             this.Load += new System.EventHandler(this.frmLogin_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

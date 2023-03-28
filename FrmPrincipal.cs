@@ -11,9 +11,9 @@ using System.Windows.Forms;
 
 namespace ProjetoCafeteria
 {
-    public partial class FrmPrincipal : Form
+    public partial class Principal : Form
     {
-        public FrmPrincipal()
+        public Principal()
         {
             InitializeComponent();
         }

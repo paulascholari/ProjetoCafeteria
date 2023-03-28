@@ -415,6 +415,7 @@
             this.Controls.Add(this.Logradouro);
             this.Controls.Add(this.NomeDoFuncionario);
             this.Name = "FrmFuncionarios";
+            this.Text = "Cadastro De Funcionarios";
             this.Load += new System.EventHandler(this.FrmFuncionarios_Load);
             this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);

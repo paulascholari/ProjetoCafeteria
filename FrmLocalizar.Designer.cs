@@ -87,7 +87,7 @@
             this.Controls.Add(this.Pesquisa);
             this.Controls.Add(this.ListaDeLocalizar);
             this.Name = "FrmLocalizar";
-            this.Text = "FrmLocalizar";
+            this.Text = "Tela Localizar";
             this.Load += new System.EventHandler(this.FrmLocalizar_Load);
             ((System.ComponentModel.ISupportInitialize)(this.ListaDeLocalizar)).EndInit();
             this.ResumeLayout(false);

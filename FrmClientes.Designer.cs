@@ -353,7 +353,7 @@
             this.Controls.Add(this.Nome);
             this.Controls.Add(this.label1);
             this.Name = "FrmClientes";
-            this.Text = "Clientes";
+            this.Text = "Cadastro De Clientes";
             this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();

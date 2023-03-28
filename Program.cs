@@ -19,7 +19,7 @@ namespace ProjetoCafeteria
             Application.SetCompatibleTextRenderingDefault(false);
             // esse comando serve para abri o banco de dados 
             BD.AbreBanco();
-            Application.Run(new FrmPrincipal());
+            Application.Run(new Principal());
         }
     }
 }

@@ -242,7 +242,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.IdPedido);
             this.Name = "FrmPedidos";
-            this.Text = "Pedidos";
+            this.Text = "Cadastro De Pedidos";
             this.Load += new System.EventHandler(this.FrmPedidos_Load);
             this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);

@@ -36,7 +36,7 @@
             this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.SuspendLayout();
             // 
-            // ListaDeCategoria
+            // Lista
             // 
             this.Lista.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.columnHeader1});
@@ -45,7 +45,7 @@
             this.Lista.Items.AddRange(new System.Windows.Forms.ListViewItem[] {
             listViewItem1});
             this.Lista.Location = new System.Drawing.Point(0, 0);
-            this.Lista.Name = "ListaDeCategoria";
+            this.Lista.Name = "Lista";
             this.Lista.Size = new System.Drawing.Size(800, 450);
             this.Lista.TabIndex = 1;
             this.Lista.UseCompatibleStateImageBehavior = false;
@@ -64,7 +64,7 @@
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.Lista);
             this.Name = "FrmCategoriaRealatorios";
-            this.Text = "CategoriaRealatorios";
+            this.Text = "Categoria Relatorios";
             this.Load += new System.EventHandler(this.FrmCategoriaRealatorios_Load);
             this.ResumeLayout(false);
 

@@ -153,7 +153,7 @@
             this.Controls.Add(this.TextCodigo);
             this.Controls.Add(this.TextCargo);
             this.Name = "FrmCargos";
-            this.Text = "Gerenciamento De Cargo";
+            this.Text = "Cadastro De Cargos";
             this.Load += new System.EventHandler(this.FrmCargos_Load);
             this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);

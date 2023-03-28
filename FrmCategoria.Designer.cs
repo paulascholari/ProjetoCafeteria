@@ -152,7 +152,7 @@
             this.Controls.Add(this.TextCodigo);
             this.Controls.Add(this.TextCategoria);
             this.Name = "FrmCategoria";
-            this.Text = "Categoria";
+            this.Text = "Cadastro De Categoria";
             this.Load += new System.EventHandler(this.FrmCategoria_Load);
             this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);

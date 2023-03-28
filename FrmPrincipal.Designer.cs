@@ -1,6 +1,6 @@
 ﻿namespace ProjetoCafeteria
 {
-    partial class FrmPrincipal
+    partial class Principal
     {
         /// <summary>
         /// Required designer variable.
@@ -78,21 +78,21 @@
             // categoriasToolStripMenuItem
             // 
             this.categoriasToolStripMenuItem.Name = "categoriasToolStripMenuItem";
-            this.categoriasToolStripMenuItem.Size = new System.Drawing.Size(145, 22);
+            this.categoriasToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.categoriasToolStripMenuItem.Text = "Categorias";
             this.categoriasToolStripMenuItem.Click += new System.EventHandler(this.categoriasToolStripMenuItem_Click);
             // 
             // produtosToolStripMenuItem
             // 
             this.produtosToolStripMenuItem.Name = "produtosToolStripMenuItem";
-            this.produtosToolStripMenuItem.Size = new System.Drawing.Size(145, 22);
+            this.produtosToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.produtosToolStripMenuItem.Text = "Produtos";
             this.produtosToolStripMenuItem.Click += new System.EventHandler(this.produtosToolStripMenuItem_Click);
             // 
             // MenuClientes
             // 
             this.MenuClientes.Name = "MenuClientes";
-            this.MenuClientes.Size = new System.Drawing.Size(145, 22);
+            this.MenuClientes.Size = new System.Drawing.Size(180, 22);
             this.MenuClientes.Text = "Clientes ";
             this.MenuClientes.Click += new System.EventHandler(this.clientesToolStripMenuItem_Click);
             // 
@@ -100,7 +100,7 @@
             // 
             this.MenuCargos.Enabled = false;
             this.MenuCargos.Name = "MenuCargos";
-            this.MenuCargos.Size = new System.Drawing.Size(145, 22);
+            this.MenuCargos.Size = new System.Drawing.Size(180, 22);
             this.MenuCargos.Text = "Cargos";
             this.MenuCargos.Click += new System.EventHandler(this.cargosToolStripMenuItem_Click);
             // 
@@ -108,7 +108,7 @@
             // 
             this.MenuFuncionarios.Enabled = false;
             this.MenuFuncionarios.Name = "MenuFuncionarios";
-            this.MenuFuncionarios.Size = new System.Drawing.Size(145, 22);
+            this.MenuFuncionarios.Size = new System.Drawing.Size(180, 22);
             this.MenuFuncionarios.Text = "Funcionarios ";
             this.MenuFuncionarios.Click += new System.EventHandler(this.funcionariosToolStripMenuItem_Click);
             // 
@@ -123,7 +123,7 @@
             // criarPedidosToolStripMenuItem
             // 
             this.criarPedidosToolStripMenuItem.Name = "criarPedidosToolStripMenuItem";
-            this.criarPedidosToolStripMenuItem.Size = new System.Drawing.Size(144, 22);
+            this.criarPedidosToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.criarPedidosToolStripMenuItem.Text = "Criar Pedidos";
             this.criarPedidosToolStripMenuItem.Click += new System.EventHandler(this.criarPedidosToolStripMenuItem_Click_1);
             // 
@@ -203,7 +203,7 @@
             this.pictureBox1.TabIndex = 1;
             this.pictureBox1.TabStop = false;
             // 
-            // FrmPrincipal
+            // Principal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -211,7 +211,7 @@
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
-            this.Name = "FrmPrincipal";
+            this.Name = "Principal";
             this.Text = "FrmPrincipal";
             this.Load += new System.EventHandler(this.FrmPrincipal_Load);
             this.menuStrip1.ResumeLayout(false);

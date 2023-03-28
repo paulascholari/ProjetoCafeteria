@@ -244,7 +244,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.IdProduto);
             this.Name = "frmProdutos";
-            this.Text = "Produtos";
+            this.Text = " Cadastro De  Produtos";
             this.Load += new System.EventHandler(this.FrmCriarPedidos_Load);
             this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);

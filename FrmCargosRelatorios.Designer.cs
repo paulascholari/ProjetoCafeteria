@@ -63,7 +63,7 @@
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.Lista);
             this.Name = "FrmCargosRelatorios";
-            this.Text = "Cargos";
+            this.Text = "Relatorio Cargos";
             this.Load += new System.EventHandler(this.FrmCargosRelatorios_Load);
             this.ResumeLayout(false);
 
