@@ -143,5 +143,10 @@ namespace ProjetoCafeteria
         {
 
         }
+
+        private void pedidosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            AbrirTela(new FrmPedidosFeitosRelatorios());
+        }
     }
 }

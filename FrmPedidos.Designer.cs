@@ -207,6 +207,7 @@
             // Preco
             // 
             this.Preco.Enabled = false;
+            this.Preco.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Preco.Location = new System.Drawing.Point(223, 64);
             this.Preco.Name = "Preco";
             this.Preco.Size = new System.Drawing.Size(63, 20);
