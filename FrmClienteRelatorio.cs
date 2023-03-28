@@ -18,7 +18,7 @@ namespace ProjetoCafeteria
         {
             InitializeComponent();
         }
-
+        
         private void FrmClienteRelatorio_Load(object sender, EventArgs e)
         {
             //comando selecionando todos os itens
