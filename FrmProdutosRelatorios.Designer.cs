@@ -77,7 +77,7 @@
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.Lista);
             this.Name = "FrmProdutosRelatorios";
-            this.Text = "ProdutosRelatorios";
+            this.Text = "Relatório Produtos";
             this.Load += new System.EventHandler(this.FrmProdutosRelatorios_Load);
             this.ResumeLayout(false);
 

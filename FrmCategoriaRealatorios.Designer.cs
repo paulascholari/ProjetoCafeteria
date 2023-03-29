@@ -64,7 +64,7 @@
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.Lista);
             this.Name = "FrmCategoriaRealatorios";
-            this.Text = "Categoria Relatorios";
+            this.Text = "Relatório Categorias";
             this.Load += new System.EventHandler(this.FrmCategoriaRealatorios_Load);
             this.ResumeLayout(false);
 
